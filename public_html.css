@@ -1,0 +1,88 @@
+body {background: #efefef url(../images/fone.png);
+		 margin: 0; 
+		 padding: 0; 
+		 font: 16px/24px Arial, Tahoma, sans-serif} /*фон сайта*/
+
+/*структура сайта*/
+
+div.header {background: #DCDCDC;} /*фон шапки*/
+
+div.mid {width: 100%;
+		 margin: 0 auto;}
+
+/*шапка сайта*/
+div.topmenu {float: right;}
+
+div.topmenu a{margin: 5px;}
+
+div.photo-tape{padding: 20px 50px 0px 50px;}
+
+div.photo-tape h3{font-style: 24px; 
+				text-shadow: black 2px 1px 2px; 
+				text-align: center; color: #8B4513;}
+
+/* главное меню*/
+div.menu
+
+/*кнопки, дизайн*/
+body {background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);}
+a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+}
+a:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46,229,157,.4);
+  color: white;
+  transform: translateY(-7px);
+}
+
+/*очистка обтекания (clearfix)*/
+.clear{clear:both;}
+
+
+/*стиль комментариев*/
+div.comment
+
+body     { margin:20px auto;
+          width:310%;
+          padding:20%;
+          border:1px solid #ccc;background:#fff;
+          font-family:georgia,times,serif;
+         }
+
+.fieldset { border:10;
+          margin:10;
+          padding:10;
+         }
+
+label   { display:block; }
+
+
+input.text,textarea 
+        { width:300px;
+          font:12px/12px 'courier new',courier,monospace;
+          color:#333;padding:3px;
+          margin:1px 0;border:1px solid #ccc; 
+        }
+
+input.submit 
+        { padding:2px 5px;
+          font:bold 12px/12px verdana,arial,sans-serif; 
+        }

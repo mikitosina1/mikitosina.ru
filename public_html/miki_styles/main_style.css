@@ -1,0 +1,177 @@
+/*Use Bootstrap-4.3.1*/
+
+body {
+	background: #efefef url(./images/fone.png);
+	margin: 0;
+	padding: 0; 
+	font: 16px/24px Arial, Tahoma, sans-serif;
+}
+
+/*очистка обтекания (clearfix)*/
+div.clear{clear: both;}
+
+article {
+	margin-left: 10%;
+	padding: 10px;
+	display: inline-block;
+}
+
+input.text,textarea {
+	width:300px;
+	font:12px/12px 'courier new',courier,monospace;
+	color:#333;
+	padding:3px;
+	margin:1px 0;
+	border: 1px solid #343a40;
+	border-radius: 3.5px;
+}
+
+.alert-warning{
+	text-align: center;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+#send{
+	background-color: transparent;
+	border-radius: 5px;
+	border-color: #a7815a;
+	color: #a7815a;
+	background-color: #343a40;
+	width: 115px;
+	height: 40px;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+#send:hover{
+	border-color: transparent;
+	background-color: #a7815a;
+	color: white;
+}
+
+#authors_login{
+	width: 300px;
+	border: 2px solid #a7815a;
+	border-radius: 3.5px;
+	background-color: #343a40;
+	color: white;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+#message{
+	border: 2px solid #a7815a;
+	border-radius: 3.5px;
+	background-color: #343a40;
+	color: white;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+.btn-outline-success {
+	color: #a7815a;
+	border-color: #a7815a;
+	left: 5%;
+}
+
+.btn-outline-success:hover{
+	border-color: transparent;
+	background-color: #a7815a;
+	color: white;
+}
+
+
+.comment_desk {
+	padding-left: 5px;
+	width: 100%;
+	height: 565px;
+}
+
+.message_text{
+	color: white;
+	left: 0;
+	border: 2px solid #a7815a;
+	border-radius: 3.5px;
+	background-color: #343a40;
+	height: 100%;
+}
+
+.message_date{
+	font-size: 0.7em;
+}
+
+.comment_block_container{
+	color: white;
+	background-color: #343a40;
+	top: 0;
+	width: 100%;
+	height: 224px;
+	overflow: scroll;
+	overflow-x: hidden;
+	font-style: italic;
+}
+
+.comment{
+	left: 0;
+	width: 100%;
+}
+
+.form_input_message{
+	left: 0;
+	width: 100%;
+	height: 300px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.submit-btn{
+	display: inline-block;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+@media (max-width: 450px){
+	.nav-item .loggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.nav-item .reggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.navbar-nav{
+		flex-direction: unset;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+.navbar-nav>.nav-item{
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+@media (max-width: 1200px){
+	.Log_button{
+		
+	}
+	.Reg_button{
+		
+	}
+}

@@ -1,0 +1,14 @@
+body {background: #efefef url(./images/fone.png);
+	margin: 0;
+	padding: 0; 
+	font: 16px/24px Arial, Tahoma, sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+/*очистка обтекания (clearfix)*/
+div.clear{clear: both;}
+
+#send{
+	bottom: 0;
+}

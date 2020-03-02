@@ -1,0 +1,162 @@
+.btn_call_right{
+	display: inline-block;
+	position: fixed;
+	bottom: 10%;
+	left: 95%;
+}
+.dws_call {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+.pulse, .block_right, .phone_right {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	color: #fff;
+	text-shadow: 1px 1px 1px blue;
+	text-align: center;
+	border-radius: 50%;
+}
+.block_right{
+	cursor: pointer;
+	z-index: 1;
+	overflow: hidden;
+}
+.pulse {
+	background: gray;
+	position: relative;
+	transition: .5s;
+}
+.phone_right {
+	left: 0px;
+	font-size: 30px;
+	line-height: 94px;
+	animation: phone 1.6s ease-in-out infinite;
+}
+.text {
+	position: absolute;
+	opacity: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+	top: 28px;
+	font-size: 14px;
+	transform: scaleX(-1);
+	transition: .5s ease-in-out;
+}
+.phone_right img {
+	transition: .5s ease-in-out;
+}
+.pulse:hover {
+	background: #29AEE3;
+}
+.pulse:hover i {
+	transition: .5s ease-in-out;
+	transform: scale(0);
+}
+.pulse:hover .text {
+	transform: scaleX(1);
+	transition: .5s ease-in-out;
+	opacity: 1;
+}
+.pulse:hover::before,
+.pulse:hover::after {
+	content: '';
+	position: absolute;
+	border: 1px solid black;
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: pulse 1.8s linear infinite;
+	opacity: 0;
+}
+.pulse:hover::after {
+	
+}
+
+@keyframes phone {
+	0%, 100% {
+		transform: rotate(-20deg);
+	}
+	50% {
+		transform: rotate(21deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+	transform: scale(1.2);
+	opacity: 0;
+	}
+}
+
+
+/*медиа на кнопку звонка слева*/
+
+@media (min-width: 359px) {
+	.dws_call {
+		left: -33px;
+	}
+	.pulse{
+		width: 50px;
+		height: 50px;
+	}
+	.block_right{
+		width: 50px;
+		height: 50px;
+	}
+	.phone_right{
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.dws_call {
+		 left: 93%;
+	}
+	.pulse{
+		width: 50px;
+		height: 50px;
+	}
+	.block_right{
+		width: 50px;
+		height: 50px;
+	}
+	.phone_right{
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.dws_call {
+		left: 94%;
+	}
+	.pulse{
+		width: 75px;
+		height: 75px;
+	}
+	.block_right{
+		width: 75px;
+		height: 75px;
+	}
+	.phone_right{
+		width: 75px;
+		height: 75px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.dws_call {
+		left: 95%;
+	}
+}
