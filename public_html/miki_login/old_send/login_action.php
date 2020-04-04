@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("../miki_connect/connect.php");
+include_once("../miki_connect/connect.php");
 
 
 // генерация случайного кода
@@ -17,7 +16,7 @@ function generateCode($length=6) {
 if(isset($_POST['submit']))
 {
 	// запись в бд, где логин равен введенному
-	$query = mysqli_query($db,"SELECT user_id, u_password FROM start_users WHERE u_email='".mysqli_real_escape_string($db,$_POST['u_email'])."' LIMIT 1");
+	$query = mysqli_query($db,"SELECT user_id, u_password FROM start_users WHERE u_login='".mysqli_real_escape_string($db,$_POST['u_login'])."' LIMIT 1");
 	$data = mysqli_fetch_assoc($query);
 
 	// Сравниваем пароли
@@ -32,8 +31,8 @@ if(isset($_POST['submit']))
 		}
 		// Записываем в БД новый хеш авторизации и IP
 		mysqli_query($db, "UPDATE start_users SET user_hash='".$hash."' ".$insip." WHERE user_id='".$data['user_id']."'");
-		setcookie("id", $data['user_id'], time()+60*60*24*4, "/");
-		setcookie("hash", $hash, time()+60*60*24*4, "/", null, null, true); // httponly !!!
+		setcookie("user_id", $data['user_id'], time()+60*60*24*4, "/");
+		setcookie("log", $hash, time()+60*60*24*4, "/", null, null, true); // httponly !!!
 
 		// На проверку
 		header("Location: ./checking_true.php"); exit();

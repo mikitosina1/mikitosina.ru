@@ -1,8 +1,9 @@
 /*Use Bootstrap-4.3.1*/
 
-body {background: #efefef url(./images/fone.png);
+body {background: #efefef url(./images/sky.jpg);
 	margin: 0;
-	padding: 0; 
+	padding: 0;
+	height: 100%;
 	font: 16px/24px Arial, Tahoma, sans-serif;
 }
 
@@ -13,6 +14,11 @@ div.container.align-items-center{
 	height: 100%;
 }
 
+.container.container_login{
+	margin-top: 8em;
+	margin-bottom: 16em;
+}
+
 .row{
 	height: 100%;
 }
@@ -20,4 +26,88 @@ div.container.align-items-center{
 div.form_components{
 	text-align: center;
 	height: 100%;
+}
+
+.h3{
+	background-color: rgba(18, 0, 36, 0.44);
+	border-radius: 3px;
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+}
+
+p{
+	background-color: rgba(18, 0, 36, 0.22);
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+
+}
+
+.btn.btn_log_login{
+	background-color: rgba(18, 0, 36, 0.88);
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+#errorBlock{
+	visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 450px){
+	.nav-item .loggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.nav-item .reggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.navbar-nav{
+		flex-direction: unset;
+		width: 14em;
+		height: 5em;
+	}
+
+	.navbar-nav:nth-last-child(5,6){}
+}
+
+.navbar-nav>.nav-item{
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+.footer{
+	background-color: rgba(18, 0, 36, 1);
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	bottom: 0;
+	text-align: center;
+}
+
+@media (max-width: 1200px){
+	.Log_button{
+
+	}
+	.Reg_button{
+
+	}
 }

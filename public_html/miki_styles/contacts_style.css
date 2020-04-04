@@ -1,8 +1,9 @@
 /*Use Bootstrap-4.3.1*/
 
-body {background: #efefef url(./images/fone.png);
+body {background: #efefef url(./images/sky.jpg);
 	margin: 0; 
-	padding: 0; 
+	padding: 0;
+	height: 100%;
 	font: 16px/24px Arial, Tahoma, sans-serif;
 }
 
@@ -13,6 +14,7 @@ div.clear{clear: both;}
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
+	background-color: rgba(18, 0, 36, 0.82);
 }
 .about h1{
 	color:#F97300;
@@ -26,7 +28,6 @@ div.clear{clear: both;}
 .about span{
 	display: block;
 	color: #888;
-	position: absolute;
 	left: 115px;
 }
 .about .desc{
@@ -35,10 +36,16 @@ div.clear{clear: both;}
 }
 .about .desc h3{
 	color: #10828C;
+	left: 0;
+	vertical-align: middle;
 }
 .about .desc p{
 	line-height: 2;
-	color: #404040FF;
+	color: rgba(255, 255, 255, 1);
+}
+
+.about .desc h4{
+	color: rgba(255, 255, 255, 1);
 }
 
 .social a {
@@ -61,3 +68,11 @@ div.clear{clear: both;}
 .vk a:hover {background: #5d84ae; color: #fff;}
 .telegram a:hover {background: #249bd7; color: #fff;}
 .whatsapp a:hover {background: #50b154; color: #fff;}
+
+.footer{
+	background-color: rgba(18, 0, 36, 1);
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	bottom: 0;
+	text-align: center;
+}

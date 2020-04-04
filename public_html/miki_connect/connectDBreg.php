@@ -1,5 +1,5 @@
 	<?php
-	//подключение к БД регистрации
+	//подключение к БД
 	$db = mysqli_connect($db_host,$db_user,$db_password) OR DIE("Не могу создать соединение ");
 	mysqli_select_db($db, "k95336st_miki");
 	$db_host = "localhost"; 

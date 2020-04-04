@@ -1,49 +1,49 @@
-<?php 
+<?php
+require_once "./miki_components/functions.php";
 session_start();
 include("./miki_connect/connect.php");
+function is_guest(){
+    if (!empty($_SESSION['log'])) {
+        return false;
+    }
+    return true;
+}
 ?>
 
 <!DOCTYPE HTML>
-<html>
-
+<html lang="ru">
 <?php require_once './miki_components/head.php';?>
-
 <body>
-
 <?php require_once './miki_components/nav_panel.php';?>
 <div class="container-fluid main_content">
 	<div class="row cell_content">
-		<!-- MainContent -->
-		<h4>Добавление статьи</h4>
+        <div class="col-sm-6 mt-4 l_side_content">
+		    <h4 class="news_labels">Добавление статьи</h4>
 			<form action="" method="post">
-			<label for="title">Заголовок статьи</label>
-			<input type="text" name="title" id="title" class="form-control">
+                <label for="title" class="news_labels">Заголовок статьи :</label>
+                <input type="text" name="title" id="title" class="form-control list">
 
-			<label for="intro">Интро статьи</label>
-			<textarea name="intro" id="intro" class="form-control"></textarea>
+                <label for="intro" class="news_labels">Интро статьи :</label>
+                <textarea name="intro" id="intro" class="form-control list"></textarea>
 
-			<label for="text">Текст статьи</label>
-			<textarea name="text" id="text" class="form-control"></textarea>
+                <label for="text" class="news_labels">Текст статьи :</label>
+                <textarea name="text" id="text" class="form-control list"></textarea>
 
-			<div class="alert alert-danger mt-2" id="errorBlock"></div>
+                <div class="alert alert-danger mt-2" id="errorBlock"></div>
 
-			<button type="button" id="article_send" class="btn btn-success mt-3">
-			Добавить
-			</button>
-		</form>
-		<!-- SideBar -->
-		<div class="col-sm-4 mt-4 r_side_content">
+                <button type="button" id="article_send" class="btn btn-success mt-3">
+                Добавить
+                </button>
+		    </form>
+        </div>
+		<div class="col-sm-6 mt-4 r_side_content">
 			<?php require './miki_components/chat.php';?>
+            <?php require_once './miki_components/userpanel.php';?>
 		</div>
 	</div>
 </div>
-<!-- BOOBStrap4 jquery -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-	$('#article_send').click(function () {
+    $('#article_send').click(function () {
 		var title = $('#title').val();
 		var intro = $('#intro').val();
 		var text = $('#text').val();
@@ -55,7 +55,7 @@ include("./miki_connect/connect.php");
 		data: {'title' : title, 'intro' : intro, 'text' : text},
 		dataType: 'html',
 		success: function(data) {
-		  if(data == 'Готово') {
+		  if(data === 'Готово') {
 			$('#article_send').text('Все готово');
 			$('#errorBlock').hide();
 			}	else {
@@ -66,6 +66,6 @@ include("./miki_connect/connect.php");
 		});
 	});
 </script>
-
+<?php require_once './miki_components/footer.php';?>
 </body>
 </html>

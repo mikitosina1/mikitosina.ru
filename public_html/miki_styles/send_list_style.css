@@ -12,3 +12,42 @@ div.clear{clear: both;}
 #send{
 	bottom: 0;
 }
+
+@media (max-width: 450px){
+	.nav-item .loggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.nav-item .reggg{
+		margin-top: 1.5%;
+		margin-bottom: 1.5%;
+	}
+
+	.navbar-nav{
+		flex-direction: unset;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+.navbar-nav>.nav-item{
+	margin-right: 3%;
+	margin-left: 3%;
+}
+
+.footer.container{
+	background-color: rgba(18, 0, 36, 1);
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+}
+
+@media (max-width: 1200px){
+	.Log_button{
+
+	}
+	.Reg_button{
+
+	}
+}

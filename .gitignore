@@ -1,4 +1,14 @@
 vendor
 composer.lock
+.cache
 .idea
 _.htaccess
+mikitosina.ru.access.log
+mikitosina.ru.access.log.20200229
+mikitosina.ru.access.log.20200301
+mikitosina.ru.access.log.20200302
+mikitosina.ru.error.log
+mikitosina.ru.error.log.20200229
+mikitosina.ru.error.log.20200301
+mikitosina.ru.error.log.20200302
+robots.txt
