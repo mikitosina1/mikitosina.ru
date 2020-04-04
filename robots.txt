@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /admin.php
-Sitemap: https://mikitosina.ru/work_project/administrate/admin.php
