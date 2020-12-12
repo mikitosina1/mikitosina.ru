@@ -1,1 +1,0 @@
-slider1.start();
