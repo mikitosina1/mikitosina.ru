@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-size: 14px;
+}
+
+form {
+    width: 300px;
+    margin: 50px auto;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.hint {
+    font-size: 14px;
+    color: #4a4d49;
+    margin-bottom: 5px;
+}
+
+input {
+    display: block;
+    width: 300px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+button {
+    border-radius: 5px;
+    background: #eb837d;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #eb655a;
+}

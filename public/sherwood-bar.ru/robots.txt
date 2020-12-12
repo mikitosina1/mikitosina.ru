@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /img
+Host: sherwood-bar.ru
+
+Sitemap: http://sherwood-bar.ru/sitemap.xml

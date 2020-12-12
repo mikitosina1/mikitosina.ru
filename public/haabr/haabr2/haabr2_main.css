@@ -1,0 +1,179 @@
+html{
+	line-height: 1.15;
+	ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: -internal-root-color;
+}
+
+body{
+	color: #333;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	height: 100%;
+	margin: 0;
+	display: block;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-family: "-apple-system",BlinkMacSystemFont,Arial,sans-serif;
+}
+
+div{
+	display: block;
+}
+
+svg{
+	fill: currentColor
+	stroke: inherit;
+}
+
+svg[Attributes Style] {
+	width: 32px;
+	height: 32px;
+}
+
+svg:not(:root){
+	overflow: hidden;
+}
+
+:not(svg) {
+	transform-origin: 0px 0px;
+}
+
+ul{
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+li{
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+label {
+	cursor: default;
+}
+
+form {
+	display: block;
+	margin-top: 0em;
+}
+
+input {
+	-webkit-writing-mode: horizontal-tb;
+	text-rendering: auto;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	-webkit-appearance: textfield;
+	background-color: white;
+	-webkit-rtl-ordering: logical;
+	cursor: text;
+	margin: 0em;
+	font: 400 13.3333px Arial;
+	padding: 1px 0px;
+	border-width: 2px;
+	border-style: inset;
+	border-color: initial;
+	border-image: initial;
+}
+
+a:-webkit-any-link {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+	color: #548eaa;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+	-webkit-appearance: button;
+}
+
+button, select {
+	text-transform: none;
+}
+
+button, input {
+	overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+button {
+	-webkit-appearance: button;
+	-webkit-writing-mode: horizontal-tb;
+	text-rendering: auto;
+	color: buttontext;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: center;
+	align-items: flex-start;
+	cursor: default;
+	background-color: buttonface;
+	box-sizing: border-box;
+	margin: 0em;
+	font: 400 13.3333px Arial;
+	padding: 1px 6px;
+	border-width: 2px;
+	border-style: outset;
+	border-color: buttonface;
+	border-image: initial;
+}
+
+h2{
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+h3{
+	display: block;
+	font-size: 1.17em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+script{
+	display: none;
+}
+
+article, aside, footer, header, nav, section{
+	display: block;
+}
+
+article[Attributes Style]{
+	-webkit-locale: "ru";
+}
+
