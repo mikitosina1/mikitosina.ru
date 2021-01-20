@@ -32,7 +32,10 @@
 					<a class="dropdown-item" href="../1homework/2hw/index.php/">hw2</a>
 					<a class="dropdown-item" href="../1homework/3hw/index.php/">hw3</a>
 					<a class="dropdown-item" href="../1homework/4hw/index.php/">hw4</a>
-					<a class="dropdown-item" href="../1homework/5hw/index.php/">hw5</a>
+                    <a class="dropdown-item" href="../1homework/5hw/index.php/">hw5</a>
+                    <a class="dropdown-item" href="../1homework/6hw/index.php/">hw6</a>
+                    <a class="dropdown-item" href="../1homework/admin-pages/index.html/">admin-page</a>
+                    <a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
 				</div>
 			</li>
 			<?php if (is_guest()):?>
