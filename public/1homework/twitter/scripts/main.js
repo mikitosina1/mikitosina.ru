@@ -10,45 +10,53 @@ class FetchData {
         return result.json();
     }
 
-    getPost = async () => await this.getResource('db/dataBase.json');
+    getPost = () => this.getResource('db/dataBase.json');
 }
 
-const obj = new FetchData();
-
-//console.log(obj);
-
-obj.getPost().then((data) => {
-    //console.log(data)
-});
 
 //основной рабочий класс
 class Twitter {
-    constructor({ user, listElem, modalElems, tweetElems }) {
-        this.user = user
-        const fetchData = new FetchData()
+    constructor({ user, listElem, modalElems, tweetElems,
+                    classDeleteTweet, classLikeTweet, sortElem,
+                    showUserPostElem, showLikedPostElem }) {
+        const fetchData = new FetchData();
         //все посты
-        this.tweets = new Posts()
+        this.user = user;
+        this.tweets = new Posts();
         this.elements = {
             listElem: document.querySelector(listElem),
+            sortElem: document.querySelector(sortElem),
             //заводим модал
             modal: modalElems,
             //эл-ты твита из new, E6 правило (вместо tweetElems: tweetElems)
-            tweetElems
-        }
+            tweetElems,
+            showUserPostElem: document.querySelector(showUserPostElem),
+            showLikedPostElem: document.querySelector(showLikedPostElem),
+        };
+
+        this.class = { classDeleteTweet, classLikeTweet};
+        this.sortDate = true;
 
         fetchData.getPost().then(data => {
-            data.forEach(this.tweets.addPost)
-            this.showAllPost()
+            data.forEach(this.tweets.addPost);
+            this.showAllPost();
         });
 
         this.elements.modal.forEach(this.handlerModal, this);
         this.elements.tweetElems.forEach(this.addTweet, this);
+
+        this.elements.listElem.addEventListener('click', this.HandlerTweet);
+        this.elements.sortElem.addEventListener('click', this.changeSort);
+
+        this.elements.showLikedPostElem.addEventListener('click', this.showLikedPost());
+        this.elements.showUserPostElem.addEventListener('click', this.showUserPost());
     }
 
-    renderPosts(tweets) {
+    renderPosts(posts) {
+        const sortPost = posts.sort(this.sortFields());
         this.elements.listElem.textContent = '';
-
-        tweets.forEach(({ id, userName, nickname, text, img, likes, getDate }) => {
+        sortPost.forEach(({ id, userName, nickname, text, img, likes,
+                            getDate, liked }) => {
             this.elements.listElem.insertAdjacentHTML('beforeend' , `
                 <li>
                     <article class="tweet">
@@ -75,7 +83,7 @@ class Twitter {
                             </div>
                         </div>
                         <footer>
-                            <button class="tweet__like">
+                            <button class="tweet__like ${liked ? this.class.classLikeTweet.active : ''}" data-id="${id}">
                                 ${likes}
                             </button>
                         </footer>
@@ -86,11 +94,18 @@ class Twitter {
     }
 
     showUserPost() {
+        const post = this.tweets.posts.filter(item => item.nick === this.nick);
+        this.renderPosts(post);
+    }
+
+    showLikedPost() {
+        const post = this.tweets.post.filter(item => item.liked);
+        this.renderPosts(post);
 
     }
 
-    showLikesPost() {
-
+    showAllPost() {
+        this.renderPosts(this.tweets.posts);
     }
 
     handlerModal({ button, modal, overlay, close }) {
@@ -109,7 +124,6 @@ class Twitter {
         // такая конструкция для возсожности добавления доп модалок
         //скрыть модалку
         const closeModal = (elem, event) => {
-            console.log(event);
             const target = event.target;
             if(target === elem){
                 modalElem.style.display = 'none';
@@ -124,7 +138,7 @@ class Twitter {
         }
 
         if (overlay) {
-            overlayElem.addEventListener('click', closeModal.bind(null));
+            overlayElem.addEventListener('click', closeModal.bind(null, overlayElem));
         }
 
         this.handlerModal.closeModal = () => {
@@ -138,6 +152,7 @@ class Twitter {
         const submitElem = document.querySelector(submit);
 
         let imgUrl = '';
+        let tempString = textElem.innerHTML;
 
         submitElem.addEventListener('click', () => {
             this.tweets.addPost({
@@ -162,9 +177,37 @@ class Twitter {
         })
     }
 
-    showAllPost() {
-        this.renderPosts(this.tweets.posts)
+    handlerTweet = event => {
+        const target = event.target;
+        if(target.classList.contains(this.class.classDeleteTweet) ) {
+            this.tweets.deletePost(target.dataset.id);
+            this.showAllPost();
+        }
+
+        if(target.classList.contains(this.class.classLikeTweet.like)) {
+            this.tweets.likePost(target.dataset.id);
+            this.showAllPost();
+        }
     }
+    //сортировка
+    changeSort = () => {
+        this.sortDate = !this.sortDate;
+        this.showAllPost();
+    }
+    //методы сортировки
+    sortFields() {
+        if(this.sortDate) {
+            return (a, d) => {
+                const dateA = new Date(a.postDate);
+                const dateB = new Date(b.postDate);
+                return dateB - dateA;
+            }
+        } else {
+            return (a, b) => b.likes - a.likes;
+        }
+    }
+
+
 
 }
 
@@ -178,11 +221,16 @@ class Posts{
     }
 
     deletePost(id) {
-
+        //формирует новый массив без того поста, чей id чекнут
+        this.posts = this.posts.filter(item => item.id !== id)
     }
 
     likePost(id) {
-
+        this.posts.forEach(item => {
+            if(item.id === id) {
+                item.changeLike();
+            }
+        })
     }
 }
 
@@ -191,7 +239,7 @@ class Post {
         this.id = id || this.generateID();
         this.userName = userName;
         this.nickname = nickname;
-        this.postDate = postDate ? new Date(postDate) : new Date();
+        this.postDate = postDate ? this.correctDate(postDate) : new Date();
         this.text = text;
         this.img = img;
         this.likes = likes;
@@ -222,9 +270,18 @@ class Post {
         };
         return this.postDate.toLocaleString('ru-RU', options);
     }
+    //корректировка в БД для firefox (обработка из класса POST)
+    correctDate(date) {
+        if (isNaN(Date.parse(date))) {
+            console.log('Некорректная дата')
+            date = date.replace(/\./g, '/') //найти все тчк и замена на слеш
+            //date = date.replaceAll('.', '/') - хороший аналог но где-то не работает
+        }
+        return new Date(date)
+    }
 }
 
-new Twitter({
+const twitter = new Twitter({
     listElem: '.tweet-list',
     user: {
         name: 'Кто-то',
@@ -238,14 +295,27 @@ new Twitter({
             close: '.modal-close__btn',
         }
     ],
-    //TODO дом задание активировать!
     tweetElems: [
         {
             text: '.modal .tweet-form__text',
             img:'.modal .tweet-img__btn',
             submit:'.modal .tweet-form__btn',
+        },
+        {
+            text: '.tweet-form__text',
+            img:'.tweet-img__btn',
+            submit:'.tweet-form__btn',
         }
-    ]
+    ],
+
+    classDeleteTweet: '.tweet__delete-button',
+    classLikeTweet: {
+        like: '.tweet__like',
+        active: '.tweet__like_active'
+    },
+    sortElem: '.header__link_sort',
+    showUserPostElem: '.header__link_profile',
+    showLikedPostElem: '.header__link_likes',
 })
 
 // генерация id и смена каждую милисек с мат префиксом для защиты дублирования id
