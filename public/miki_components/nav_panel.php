@@ -22,20 +22,11 @@
 				Hometask
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="../work_project/index.html">Тиснение</a>
-					<a class="dropdown-item" href="../haabr/haabr.html">haabr1</a>
-					<a class="dropdown-item" href="../haabr/haabr2/haabr2.html">haabr2</a>
-					<a class="dropdown-item" href="../learn.php">learn</a>
-					<a class="dropdown-item" href="https://zhuravlevlm.ru/">zhuravlev</a>
-					<a class="dropdown-item" href="../sherwood-bar.ru/index.html">sherwood-bar</a>
-					<a class="dropdown-item" href="../1homework/1hw/index.php/">hw1</a>
-					<a class="dropdown-item" href="../1homework/2hw/index.php/">hw2</a>
-					<a class="dropdown-item" href="../1homework/3hw/index.php/">hw3</a>
-					<a class="dropdown-item" href="../1homework/4hw/index.php/">hw4</a>
-                    <a class="dropdown-item" href="../1homework/5hw/index.php/">hw5</a>
-                    <a class="dropdown-item" href="../1homework/6hw/index.php/">hw6</a>
-                    <a class="dropdown-item" href="../1homework/admin-pages/index.html/">admin-page</a>
                     <a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
+					<a class="dropdown-item" href="../learn.php">learn</a>
+                    <a class="dropdown-item" href="../1homework/6hw/index.php">hw2</a>
+                    <a class="dropdown-item" href="../work_project/index.html">Тиснение</a>
+                    <a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
 				</div>
 			</li>
 			<?php if (is_guest()):?>

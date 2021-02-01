@@ -15,4 +15,5 @@ robots.txt
 adminer422.php
 adminer.css
 admin-pages/
-miki_connect/
+miki_connect/connect.php
+miki_connect/connectDBreg.php

@@ -25,5 +25,7 @@
         <input type="text" name="fav_films" placeholder="Любимые фильмы">
         <button type="submit">Отправить</button>
     </form>
+
+    <a href="/">На домашнюю страницу!</a>
 </body>
 </html>

@@ -1,0 +1,39 @@
+11:20:58.204713 [    7f1aed5f8187] --- SIGSTOP (Stopped (signal)) @ 0 (0) ---
+11:20:58.204801 [    7f1aed5f8187] --- SIGSTOP (Stopped (signal)) @ 0 (0) ---
+11:20:58.204875 [    7f1aed6c9c02] getcwd("/home/k/k95336st/mikitosina.ru/public_html/miki_login", 4096) = 54
+11:20:58.205199 [    7f1aed6c8815] lstat("/home/k/k95336st/mikitosina.ru/public_html/miki_login/../miki_components/nav_panel.php", {st_mode=S_IFREG|0600, st_size=2633, ...}) = 0
+11:20:58.205344 [    7f1aed6c8815] lstat("/home/k/k95336st/mikitosina.ru/public_html/miki_login/../miki_components", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
+11:20:58.205465 [    7f1aed6c8c8e] openat(AT_FDCWD, "/home/k/k95336st/mikitosina.ru/public_html/miki_components/nav_panel.php", O_RDONLY) = 3
+11:20:58.205523 [    7f1aed6c87c3] fstat(3, {st_mode=S_IFREG|0600, st_size=2633, ...}) = 0
+11:20:58.205572 [    7f1aed6d4a13] mmap(NULL, 2633, PROT_READ, MAP_SHARED, 3, 0) = 0x7f1aee6d8000
+11:20:58.205845 [    7f1aed6d4ab7] munmap(0x7f1aee6d8000, 2633) = 0
+11:20:58.205971 [    7f1aed6c98d4] close(3) = 0
+11:20:58.206089 [    7f1aed6c8775] stat("/home/k/k95336st/mikitosina.ru/public_html/miki_components/nav_panel.php", {st_mode=S_IFREG|0600, st_size=2633, ...}) = 0
+11:20:58.206223 [    7f1aed6c9af7] chdir("/") = 0
+11:20:58.206284 [    7f1aed68ee57] setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+11:20:58.206710 [    7f1aed6c95f1] fcntl(9, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+11:20:58.206773 [    7f1aed68ee57] setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+11:20:58.206857 [    7f1aed6cf6b4] writev(10, [{"HTTP/1.1 200 OK\r\nDate: Tue, 03 Mar 2020 08:20:47 GMT\r\nServer: Apache/2.4.10 (Unix)\r\nX-Powered-By: PHP/7.3.12\r\nContent-Length: 5808\r\nContent-Type: text/html\r\n\r\n", 159}, {"<!DOCTYPE html>\r\n\r\n<html>\r\n\r\n<head>\r\n\t<meta charset=\"UTF-8\">\r\n\t<title>Login</title>\r\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n\t<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"../miki_styles/images/doge.jpg\">\r\n\t<!-- bootstrap4 -->\r\n\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\r\n\t<link rel=\"stylesheet\" href=\"../miki_styles/main_style.css\" media=\"all\">\r\n\t<link rel=\"stylesheet\" href=\"../miki_styles/login_style.css\" media=\"all\">\r\n</head>\r\n\r\n<body>\r\n\r\n<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark flex-column flex-md-row\" role=\"navigation\">\r\n\t<a class=\"navbar-brand\" href=\"/\">\r\n\t\t<img src=\"../miki_styles/images/logotype_F.png\" alt=\"\320\233\320\276\320\263\320\276\321\202\320\270\320\277 \321\201\320\260\320\271\321\202\320\260\" title=\"\320\233\320\276\320\263\320\276\321\202\320\270\320\277 \321\201\320\260\320\271\321\202\320\260\" class=\"logo_header\">\r\n\t</a>\r\n\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n\t\t<span class=\"navbar-toggler-icon\"></span>\r\n\t</button>\r\n\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n\t\t<ul class=\"navbar-nav mr-auto\">\r\n\t\t\t<li class=\"nav-item active\">\r\n\t\t\t\t<a class=\"nav-link\" href=\"/\">Home\r\n\t\t\t\t<span class=\"sr-only\">(current)</span></a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t<a class=\"nav-link\" href=\"../news.php\">News</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t<a class=\"nav-link\" href=\"../contacts.php\">Contacts</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"nav-item dropdown\">\r\n\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n\t\t\t\tHometask\r\n\t\t\t\t</a>\r\n\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../work_project/index.html\">\320\242\320\270\321\201\320\275\320\265\320\275\320\270\320\265</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../haabr/haabr.html\">haabr1</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../haabr/haabr2/haabr2.html\">haabr2</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../learn.php\">learn</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"https://zhuravlevlm.ru/\">zhuravlev</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../sherwood-bar.ru/index.html\">sherwood-bar</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../1homework/1hw/index.php/\">hw1</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../1homework/2hw/index.php/\">hw2</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../1homework/3hw/index.php/\">hw3</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../1homework/4hw/index.php/\">hw4</a>\r\n\t\t\t\t\t<a class=\"dropdown-item\" href=\"../1homework/5hw/index.php/\">hw5</a>\r\n\t\t\t\t</div>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t<a class=\"btn btn-outline-primary Log_button\" href=\"../miki_login/login.php\">Login</a>\r\n\t\t\t</li>\r\n\t\t\t<li class=\"nav-item\">\r\n\t\t\t\t<a class=\"btn btn-outline-secondary Reg_button\" href=\"../miki_registration/reg.php\">Registr"..., 5808}], 2) = 5967
+11:20:58.207399 [    7f1aed6cf017] getrusage(RUSAGE_SELF, {ru_utime={0, 9999}, ru_stime={0, 3333}, ...}) = 0
+11:20:58.207532 [    7f1aed9bb281] write(7, "{ \"@timestamp\": \"2020-03-03T11:20:47+0300\", \"@fields\": { \"vhost\": \"mikitosina.ru\", \"ip\": \"5.101.159.150\", \"method\": \"GET\", \"url\": \"/miki_login/login.php\", \"user\": \"-\", \"status\": \"200\", \"user_agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36\", \"referer\": \"https://mikitosina.ru/miki_login/login.php?\", \"bytes_sent\": \"5808\", \"real_time\": \"10920548\", \"utime\": \"9999\", \"stime\": \"3333\"},  \"@message\": \"mikitosina.ru 5.101.159.150 - - [03/Mar/2020:11:20:47 +0300] \\\"GET /miki_login/login.php? HTTP/1.1\\\" 200 5808 \\\"https://mikitosina.ru/miki_login/login.php?\\\" \\\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36\\\" 10920548 9999:3333\" }\n", 808) = 808
+11:20:58.207687 [    7f1aed9bb281] write(8, "mikitosina.ru 5.101.159.150 - - [03/Mar/2020:11:20:47 +0300] \"GET /miki_login/login.php? HTTP/1.1\" 200 5808 \"https://mikitosina.ru/miki_login/login.php?\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36\"\n", 290) = 290
+11:20:58.207777 [    7f1aed69d577] times({tms_utime=0, tms_stime=0, tms_cutime=0, tms_cstime=0}) = 2758078963
+11:20:58.207902 [    7f1aed9bb34e] read(10, 0x55a378555788, 8000) = -1 EAGAIN (Resource temporarily unavailable)
+11:20:58.207962 [    7f1aed6cdbc4] poll([{fd=10, events=POLLIN}], 1, 1000) = 1 ([{fd=10, revents=POLLIN}])
+11:20:59.197382 [    7f1aed9bb34e] read(10, "", 8000) = 0
+11:20:59.197589 [    7f1aed9b984e] futex(0x7f1ad507682c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+11:20:59.200920 [    7f1aed69de06] exit_group(0) = ?
+
+Opened file descriptors at strace start:
+0 -> pipe:[814059835]
+1 -> pipe:[814059836]
+2 -> pipe:[814086970]
+4 -> pipe:[814086969]
+5 -> pipe:[814086969]
+6 -> anon_inode:[eventpoll]
+7 -> pipe:[814086975]
+8 -> /var/log/apache2/access.log
+9 -> /tmp/.ZendSem.vTYG0Z (deleted)
+10 -> socket:[833908018]
+Socket: 833908018 L:127.73.0.3:80 R:127.0.0.1:64769
+strace -- version 4.5.20
