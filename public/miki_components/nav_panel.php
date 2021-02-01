@@ -23,7 +23,6 @@
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
-					<a class="dropdown-item" href="../learn.php">learn</a>
                     <a class="dropdown-item" href="../1homework/6hw/index.php">hw2</a>
                     <a class="dropdown-item" href="../work_project/index.html">Тиснение</a>
                     <a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
