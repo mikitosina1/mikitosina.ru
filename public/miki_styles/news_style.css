@@ -6,24 +6,17 @@ html{
 }
 
 body {
-	background: #efefef url(./images/sky.jpg);
-	background-attachment: fixed;
-	height: 100%;
-	min-height: 100%;
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 	font: 16px/24px Arial, Tahoma, sans-serif;
-}
-
-.navbar{
-	background-color: rgba(18, 0, 36, 1);
 }
 
 /*очистка обтекания (clearfix)*/
 div.clear{clear: both;}
 
 .main_content{
-	background-color: rgba(18, 0, 36, 0.82);
+	background-color: rgba(18, 0, 36, 0.6);
 	width: 70%;
-	height: 100%!important;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -54,62 +47,6 @@ div.clear{clear: both;}
 	margin-bottom: 2%;
 }
 
-.footer{
-	position: fixed;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px
-	line-height: 60px;
-	background-color: rgba(18, 0, 36, 1);
-	color: #e9ecef;
-	text-shadow: #000000 1px 1px;
-}
-
 .alert.alert-danger{
 	display: none;
-}
-
-
-@media (max-width: 450px){
-	.loggg{
-		position: absolute;
-		margin-top: 10.5%;
-		margin-bottom: 1.5%;
-		left: 15%;
-	}
-
-	.reggg{
-		position: absolute;
-		margin-top: 10.5%;
-		margin-bottom: 1.5%;
-		right: 20%;
-	}
-
-	.navbar-nav{
-		flex-direction: unset;
-		width: 14em;
-		height: 5em;
-	}
-
-	.dropdown{
-		z-index: 10;
-	}
-
-	.footer{
-	}
-}
-
-.navbar-nav>.nav-item{
-	margin-right: 3%;
-	margin-left: 3%;
-}
-
-@media (max-width: 1200px){
-	.Log_button{
-
-	}
-	.Reg_button{
-
-	}
 }

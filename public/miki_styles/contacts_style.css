@@ -1,9 +1,10 @@
 /*Use Bootstrap-4.3.1*/
 
-body {background: #efefef url(./images/sky.jpg);
+body {
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 	margin: 0; 
 	padding: 0;
-	height: 100%;
 	font: 16px/24px Arial, Tahoma, sans-serif;
 }
 
@@ -14,16 +15,19 @@ div.clear{clear: both;}
 	margin: 4em 0;
 	padding: 1em;
 	position: relative;
-	background-color: rgba(18, 0, 36, 0.82);
+	background-color: rgba(18, 0, 36, 0.6);
 }
 .about h1{
 	color:#F97300;
 	margin: 2em;
 }
-.about img{
+.about .img-fluid{
 	height: 100%;
 	width: 100%;
-	border-radius: 50%
+	border-radius: 50%;
+}
+.about .nick__frame{
+	margin-left: 35em;
 }
 .about span{
 	display: block;

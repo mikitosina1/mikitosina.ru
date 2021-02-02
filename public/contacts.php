@@ -10,9 +10,11 @@ include("./miki_connect/connect.php");
 
 <!DOCTYPE HTML>
 <html lang="ru">
-<?php require_once './miki_components/head.php';?>
-<link rel="stylesheet" href="./miki_styles/contacts_style.css" media="all">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+<head>
+    <?php require_once './miki_components/head.php';?>
+    <link rel="stylesheet" href="./miki_styles/contacts_style.css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+</head>
 <body>
 
 <?php require_once './miki_components/nav_panel.php';?>
@@ -51,10 +53,18 @@ include("./miki_connect/connect.php");
 			<div class="social whatsapp">
 				<a href=" https://wa.me/89533610771" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
 			</div>
+        <div class="nick__frame">
+            <a href="https://nick-name.ru/nickname/id1662492/">
+                <img src="https://nick-name.ru/img.php?id=1662492&sert=1" alt="Сертификат на никнейм mikitosina1, зарегистрирован на https://vk.com/mikitosina" border="0" style="width: 25em; height: 15em;"/>
+            </a>
+        </div>
+        </p>
 <!--        --><?php //require_once './miki_components/userpanel.php';?>
 	</div>
 </div>
-<?php require_once './miki_components/footer.php';?>
+<footer>
+    <?php require_once 'miki_components/footer.php';?>
+</footer>
 </body>
 
 

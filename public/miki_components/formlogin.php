@@ -1,6 +1,6 @@
 <div class="block-form-signin">
-	<form action="/miki_login/login_action.php" class="form-signin" method="post">
-		<h1 class="h4 mb-3 font-weight-normal white-form-name">Войти в учётную запись</h1>
+	<form action="/miki_login/login_action.php" class="form-signin " method="post">
+		<h1 class="h6 mb-3 font-weight-normal white-form-name">Быстрый вход в учётную запись</h1>
 		<label for="u_login" class="sr-only">Введите логин</label>
 		<input type="text" name="u_login" id="u_login" class="form-control" placeholder="Ваш логин" required="" autofocus="">
 		<br>

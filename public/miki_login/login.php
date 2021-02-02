@@ -3,27 +3,21 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 session_start();
-require_once '../miki_connect/connect.php';
+require_once "../miki_connect/connect.php";
 require_once "../miki_components/functions.php";
 ?>
 
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Login</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" type="image/x-icon" href="../miki_styles/images/doge.jpg">
-	<!-- bootstrap4 -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="../miki_styles/main_style.css" media="all">
+    <?php require_once '../miki_components/head.php';?>
 	<link rel="stylesheet" href="../miki_styles/login_style.css" media="all">
 </head>
 
 <body>
 
 <?php require_once '../miki_components/nav_panel.php';?>
-<div class="container container_login align-items-center">
+<div class="container-fluid main_content align-items-center">
 	<div class="row">
 		<div class="col-sm"></div>
 		<div class="col-sm form_components">
@@ -50,6 +44,9 @@ require_once "../miki_components/functions.php";
 		<div class="col-sm"></div>
 	</div>
 </div>
-<?php require_once '../miki_components/footer.php';?>
+
+<footer>
+    <?php require_once '../miki_components/footer.php';?>
+</footer>
 </body>
 </html>

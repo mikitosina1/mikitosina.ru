@@ -12,18 +12,15 @@
 ?>
 <!DOCTYPE HTML>
 <html lang="ru">
-	<?php require_once "./miki_components/head.php";?>
+    <head>
+        <?php require_once "./miki_components/head.php";?>
+    </head>
 	<body>
 		<?php require_once "./miki_components/nav_panel.php";?>
 		<div class="container-fluid main_content">
 			<div class="row cell_content">
-				<div class="col-sm-2 mt-4">
-					<div class = "side_user_panel">
-						<?php require_once "./miki_components/userpanel.php";?>
-					</div>
-				</div>
 				<div class="col-sm-2"></div>
-				<div class="col-sm-4 mt-4 r_side_content">
+				<div class="col-sm-5 mt-4 r_side_content">
 					<div class="col-sm post__text">
                         <p>Здравствуйте, ребята, Эта часть скоро станет динамической!<br>
                             Вы спросите: для чего я сделал этот блог?<br>
@@ -49,11 +46,18 @@
                         <p><?php echo every5and10(); ?></p>
                     </div>
 				</div>
-				<div class="col-sm-4 mt-4 r_side_content">
-					<?php require "./miki_components/chat.php";?>
+				<div class="col-sm-3 mt-4 d-flex align-items-end flex-column r_side_content">
+                    <div class="col">
+                            <?php require_once "./miki_components/userpanel.php";?>
+                    </div>
+                    <div class="col mt-3 chat__inner">
+					    <?php require "./miki_components/chat.php";?>
+                    </div>
 				</div>
 			</div>
 		</div>
-		<?php require_once "./miki_components/footer.php";?>
+        <footer>
+            <?php require_once "./miki_components/footer.php";?>
+        </footer>
 	</body>
 </html>

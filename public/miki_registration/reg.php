@@ -2,22 +2,17 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 session_start();
-require_once ("../miki_connect/connect.php");
+require_once "../miki_connect/connect.php";
 require_once "../miki_components/functions.php";
 ?>
 
 <!DOCTYPE html>
 <html>
+
+
 <head>
-	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image/x-icon" href="../miki_styles/images/doge.jpg">
-		<!-- BOOBStrap4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="shortcut icon" type="image/x-icon" href="./miki_styles/images/doge.jpg">
-	<link rel="stylesheet" href="./miki_styles/main_style.css" media="all">
-	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-	<link rel="stylesheet" href="../miki_styles/reg_style.css" media="all">
-	<title>Registration Form</title>
+    <?php require_once "../miki_components/head.php";?>
+    <link rel="stylesheet" href="../miki_styles/reg_style.css" media="all">
 </head>
 
 <body>
@@ -54,8 +49,9 @@ require_once "../miki_components/functions.php";
 		<div class="col-sm"></div>
 	</div>
 </div>
-
-<?php require_once '../miki_components/footer.php';?>
+<footer>
+    <?php require_once "../miki_components/footer.php";?>
+</footer>
 </body>
 </html>
 
