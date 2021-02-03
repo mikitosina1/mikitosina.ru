@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark flex-column flex-md-row" role="navigation">
+<nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
 	<a class="navbar-brand" href="/">
-		<img src="../miki_styles/images/logotype_F.png" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
+		<img src="../miki_styles/images/logo-03.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
+        <div class="title__blog">Mikitosina's Blog :D</div>
 	</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
