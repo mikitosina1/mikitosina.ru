@@ -22,9 +22,10 @@ div.clear{clear: both;}
 	margin: 2em;
 }
 .about .img-fluid{
-	height: 100%;
+	height: 90%;
 	width: 100%;
 	border-radius: 50%;
+	margin-top: 5vh;
 }
 .about .nick__frame{
 	margin-left: 35em;
@@ -72,11 +73,3 @@ div.clear{clear: both;}
 .vk a:hover {background: #5d84ae; color: #fff;}
 .telegram a:hover {background: #249bd7; color: #fff;}
 .whatsapp a:hover {background: #50b154; color: #fff;}
-
-.footer{
-	background-color: rgba(18, 0, 36, 1);
-	color: #e9ecef;
-	text-shadow: #000000 1px 1px;
-	bottom: 0;
-	text-align: center;
-}

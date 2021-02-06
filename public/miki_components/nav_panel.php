@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
-	<a class="navbar-brand" href="/">
-		<img src="../miki_styles/images/logo-03.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
-        <div class="title__blog">Mikitosina's Blog :D</div>
-	</a>
+    <div class="logo__part">
+        <a class="navbar-brand" href="/">
+            <img src="../miki_styles/images/logo-03.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
+            <div class="title__blog">Mikitosina's Blog :D</div>
+        </a>
+    </div>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>

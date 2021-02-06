@@ -18,7 +18,7 @@ require_once "../miki_components/functions.php";
 
 <?php require_once '../miki_components/nav_panel.php';?>
 <div class="container-fluid main_content align-items-center">
-	<div class="row">
+	<div class="row row__content">
 		<div class="col-sm"></div>
 		<div class="col-sm form_components">
 			<?php if (is_guest()):?>
