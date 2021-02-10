@@ -1,6 +1,21 @@
 .navbar{
     background-color: rgba(18, 0, 36, 0.6);
+    text-align: center;
 }
+
+.navbar-toggler {
+    color: whitesmoke;
+    border-color: whitesmoke;
+    background-color: #6A5ACD;
+}
+
+.navbar-toggler-icon{
+    color: whitesmoke;
+    /*background-image: url("/images/hamburger.svg");*/
+    height: 3vh;
+    width: 3vh;
+}
+
 
 @media (max-width: 450px){
     .loggg{
@@ -31,4 +46,5 @@
 .navbar-nav>.nav-item{
     margin-right: 3%;
     margin-left: 3%;
+
 }
