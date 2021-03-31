@@ -93,11 +93,11 @@ input.text,textarea {
     color: white;
     background-color: #343a40;
     top: 0;
-    width: 90%;
-    height: 39%;
+    width: 300px;
+    height: 45%;
     overflow: scroll;
     overflow-x: hidden;
-    font-style: italic;
+    font: 16px/24px Arial, Tahoma, sans-serif;
     border:  1px rgba(18, 0, 36, 0.7);
     border-radius: 5px;
 }

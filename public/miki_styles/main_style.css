@@ -36,14 +36,19 @@ div .clear{clear: both;}
 	margin-top: 0.3em;
 }
 
+.post__text:first-child{
+	margin-top:0px;
+}
+
 .post__text{
-	background-color: rgba(255, 255, 255, 0.21);
+	background-color: rgba(255, 255, 255, 0.11);
 	border-radius: 8px;
 	color: #e9ecef;
 	text-shadow: #000000 1px 1px;
 	text-align: center;
-	margin-top: 0.3em;
+	margin-top: 0.5em;
 	width: 100%;
+	padding: 20px;
 }
 
 .side_user_panel{
@@ -67,8 +72,18 @@ div .clear{clear: both;}
 	color: red;
 }
 
+.row .login_n_chat{
+	background-color: rgba(255, 255, 255, 0.11);
+	border-radius: 8px;
+	padding-top: 30px;
+}
+
 .alert.alert-danger{
 	display: none;
+}
+
+.chat__inner{
+	padding-left: 0px;
 }
 
 ::-webkit-scrollbar-track

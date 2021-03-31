@@ -7,19 +7,27 @@
 
 .navbar-toggler{
 	color: whitesmoke;
-	border-color: whitesmoke;
-	background-color: #6A5ACD;
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 50px;
+	height: 50px;
+	font-size: 1rem;
+	line-height: 1rem;
 }
 
 .navbar-toggler-icon{
-	color: whitesmoke;
-	height: 3vh;
-	width: 3vh;
+	width: 25px;
+	height: 25px;
+}
+
+.navbar-toggler-icon img{
+	width: 25px;
+	height: 25px;
 }
 
 .navbar .logo__part{
-	padding-left: 40px;
-    padding-right: 40px;
+	width: 200px;
+	height: 68px;
+	margin-left: 35px;
 }
 
 .navbar .logo__part .navbar-brand{
@@ -30,8 +38,8 @@
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	width: 6vh;
-	height: 6vh;
+	width: 43px;
+	height: 43px;
 }
 
 .title__blog{
@@ -79,20 +87,31 @@ nav .collapse .navbar-nav{
 		right: 20%;
 	}
 
-/*	.navbar-nav{
+	.navbar-nav{
 		flex-direction: unset;
 		width: 14em;
 		height: 5em;
-	}*/
+	}
 
 	.dropdown{
 		z-index: 10;
+	}
+
+	.navbar-toggler-icon{
+		position: fixed;
+		left: 200px;
+		top: 11px;
+	}
+
+	.navbar .logo__part {
+		width: 250px;
+		height: 65px;
 	}
 }
 
 @media (min-width: 992px){
 	.navbar-expand-lg .navbar-nav .dropdown-menu{
 		position: absolute;
-    	width: 223px;
+		width: 223px;
 	}
 }

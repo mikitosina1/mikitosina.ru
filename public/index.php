@@ -46,7 +46,7 @@
                         <p><?php echo every5and10(); ?></p>
                     </div>
 				</div>
-				<div class="col-sm-3 mt-4 d-flex align-items-end flex-column r_side_content">
+				<div class="col-sm-3 mt-4 d-flex align-items-end flex-column r_side_content login_n_chat">
                     <div class="col">
                             <?php require_once "./miki_components/userpanel.php";?>
                     </div>

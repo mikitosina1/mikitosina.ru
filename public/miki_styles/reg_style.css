@@ -22,12 +22,17 @@ label{
 }
 
 .col-sm.reg_form_content form{
-	width: 80%;
+	width: 365px;
 }
 
 .container.reg_form_container{
-	margin-top: 1em;
-	margin-bottom: 10em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: rgba(18, 0, 36, 0.6);
+	width: 70%;
+	min-height: calc(100vh - 75px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ::-webkit-scrollbar-track
