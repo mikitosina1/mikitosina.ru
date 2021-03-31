@@ -1,22 +1,27 @@
 /*Use Bootstrap-4.3.1*/
 
 html{
-	min-height: 100%;
+	min-height: 100vh;
 	position: relative;
 }
 
 body {
 	background-color: #7f5a83;
-	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+	background-attachment: fixed;
+	background: -webkit-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: -moz-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
 	font: 16px/24px Arial, Tahoma, sans-serif;
 }
 
 /*очистка обтекания (clearfix)*/
-div.clear{clear: both;}
+div .clear{clear: both;}
+a{color: whitesmoke;}
 
 .main_content{
 	background-color: rgba(18, 0, 36, 0.6);
 	width: 70%;
+	min-height: calc(100vh - 75px);
 	margin-left: auto;
 	margin-right: auto;
 }
