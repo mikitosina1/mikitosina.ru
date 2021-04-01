@@ -57,7 +57,7 @@ nav .show{
 nav .collapse .navbar-nav{
 	margin: 0px!important;
 	width: 1300px;
-	padding: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 170px;
 }
 
 .dropdown-item{
@@ -112,6 +112,6 @@ nav .collapse .navbar-nav{
 @media (min-width: 992px){
 	.navbar-expand-lg .navbar-nav .dropdown-menu{
 		position: absolute;
-		width: 223px;
+		width: 208px;
 	}
 }
