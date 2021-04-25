@@ -3,7 +3,6 @@
 		<a class="navbar-brand" href="/">
 			<img src="../miki_styles/images/blog.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
 			<div class="title__blog">Mikitosina's Blog :D</div>
-			<div class="hidden">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 		</a>
 	</div>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,11 +22,11 @@
 			<li class="nav-item">
 				<a class="nav-link" href="../contacts.php">Contacts</a>
 			</li>
-			<li class="nav-item dropdown">
+			<li class="nav-item dropdown drop_btn">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Hometask
 				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<div class="dropdown-menu drop_block" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
 					<a class="dropdown-item" href="../1homework/2hw/index.php">parser</a>
 					<a class="dropdown-item" href="../1homework/3hw/index.php">3hw</a>
@@ -40,7 +39,7 @@
 				<a class="btn btn-outline-primary Log_button" href="../miki_login/login.php">Login</a>
 			</li>
 			<li class="nav-item reggg">
-				<a class="btn btn-outline-secondary Reg_button" href="../miki_registration/reg.php">Registration</a>
+				<a class="btn btn-warning Reg_button" href="../miki_registration/reg.php">Registration</a>
 			</li>
 			<?php else:?>
 				<li class="nav-item">

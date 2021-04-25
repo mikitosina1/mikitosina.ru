@@ -25,9 +25,8 @@
 }
 
 .navbar .logo__part{
-	width: 200px;
-	height: 68px;
-	margin-left: 35px;
+	width: 300px;
+	height: 75px;
 }
 
 .navbar .logo__part .navbar-brand{
@@ -35,16 +34,18 @@
 }
 
 .logo_header{
+	display: inline-flex;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	width: 43px;
-	height: 43px;
+	width: 115px;
+	height: 60px;
 }
 
 .title__blog{
+	display: inline-flex;
 	color: whitesmoke;
-	height: 4vh;
+	height: 3.25vh;
 	vertical-align: middle;
 }
 
@@ -57,7 +58,7 @@ nav .show{
 nav .collapse .navbar-nav{
 	margin: 0px!important;
 	width: 1300px;
-	padding: 0px 0px 0px 170px;
+	padding: 0px 0px 0px 100px;
 }
 
 .dropdown-item{
@@ -70,21 +71,52 @@ nav .collapse .navbar-nav{
 
 }
 
+.nav-link:hover{
+	color: black;
+	background-color: #FFFFFF44;
+	border: 1px black;
+	border-radius: .25rem;
+}
+
+.loggg{
+	position: absolute;
+	margin-top: 10.5%;
+	margin-bottom: 1.5%;
+	left: 15%;
+}
+
+.reggg{
+	position: absolute;
+	margin-top: 10.5%;
+	margin-bottom: 1.5%;
+	right: 20%;
+}
 
 
 @media (max-width: 450px){
 	.loggg{
 		position: absolute;
-		margin-top: 10.5%;
-		margin-bottom: 1.5%;
+		padding-top: 0px!important;
+		margin-top: -5%;
 		left: 15%;
 	}
 
 	.reggg{
 		position: absolute;
-		margin-top: 10.5%;
-		margin-bottom: 1.5%;
+		padding-top: 0px!important;
+		margin-top: -5%;
 		right: 20%;
+	}
+
+	.navbar .logo__part .navbar-brand .title__blog{
+		display: none;
+	}
+
+	.navbar-nav .reggg .Reg_button:hover{
+		color: black;
+		background-color: #FFFFFF44;
+		border: 1px black;
+		border-radius: .25rem;
 	}
 
 	.navbar-nav{
@@ -94,18 +126,49 @@ nav .collapse .navbar-nav{
 	}
 
 	.dropdown{
-		z-index: 10;
+		z-index: 2;
 	}
 
 	.navbar-toggler-icon{
-		position: fixed;
-		left: 200px;
-		top: 11px;
+		position: absolute;
+		left: 265px;
+		top: 20px;
 	}
 
 	.navbar .logo__part {
-		width: 250px;
+		width: 115px;
 		height: 65px;
+		margin-top: -5px;
+	}
+
+	nav .show {
+		background-color: rgba(0, 0, 0, 1);
+		text-align: center;
+		align-items: center;
+		display: flex;
+		position: absolute;
+		top: 75px;
+		height: 150px;
+		width: 23rem;
+		z-index: 2;
+	}
+
+	nav .collapse .navbar-nav{
+		margin: 0px!important;
+		width: 360px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.navbar-nav>.nav-item {
+		padding-top: 2em;
+		padding-right: 4.5%;
+		padding-left: 4.5%;
+	}
+
+	.navbar-nav>.nav-item .show:nth-child(4n){
+		padding-top: 0;
+		padding-right: 0;
+		padding-left: 0;
 	}
 }
 

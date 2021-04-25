@@ -8,3 +8,10 @@
     color: #e9ecef;
     text-shadow: #000000 1px 1px;
 }
+
+@media (max-width: 450px){
+	.footer{
+		width:23em;
+		height: 10em;
+	}
+}

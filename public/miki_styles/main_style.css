@@ -106,7 +106,9 @@ div .clear{clear: both;}
 
 
 @media (max-width: 450px){
-
+	.main_content{
+		width:23em;
+	}
 }
 
 @media (max-width: 1200px){
