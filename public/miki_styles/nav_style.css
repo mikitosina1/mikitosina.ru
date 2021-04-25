@@ -78,7 +78,7 @@ nav .collapse .navbar-nav{
 	border-radius: .25rem;
 }
 
-.loggg{
+/*.loggg{
 	position: absolute;
 	margin-top: 10.5%;
 	margin-bottom: 1.5%;
@@ -90,10 +90,14 @@ nav .collapse .navbar-nav{
 	margin-top: 10.5%;
 	margin-bottom: 1.5%;
 	right: 20%;
-}
+}*/
 
 
 @media (max-width: 450px){
+	.navbar{
+		width: 23em;
+	}
+
 	.loggg{
 		position: absolute;
 		padding-top: 0px!important;
@@ -129,10 +133,14 @@ nav .collapse .navbar-nav{
 		z-index: 2;
 	}
 
+	.navbar-toggler{
+		margin-top: 9px;
+	}
+
 	.navbar-toggler-icon{
 		position: absolute;
-		left: 265px;
-		top: 20px;
+		left: 272px;
+		top: 29px;
 	}
 
 	.navbar .logo__part {
