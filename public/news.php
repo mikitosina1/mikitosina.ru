@@ -4,16 +4,16 @@ ini_set("display_errors", 1);
 
 session_start();
 
-require_once "./miki_components/functions.php";
-include_once("./miki_connect/connect.php");
+require_once "./components/main_func.php";
+include_once("./connect/connect.php");
 ?>
 
 <!DOCTYPE HTML>
 <html lang="ru">
-<?php require_once './miki_components/head.php';?>
-<link rel="stylesheet" href="../miki_styles/news_style.css" media="all">
+<?php require_once './components/head.php';?>
+<link rel="stylesheet" href="../styles/news_style.css" media="all">
 <body>
-<?php require_once './miki_components/nav_panel.php';?>
+<?php require_once './components/nav_panel.php';?>
 <div class="container-fluid main_content">
 	<div class="row cell_content">
         <div class="col-sm-6 mt-4 l_side_content">
@@ -36,10 +36,10 @@ include_once("./miki_connect/connect.php");
 		    </form>
         </div>
 		<div class="col-sm-6 mt-4 r_side_content">
-			<?php require './miki_components/chat.php';?>
+			<?php require './components/chat.php';?>
             <div class = "side_user_panel">
                 <?php
-                    //require_once "./miki_components/userpanel.php";
+                    //require_once "./components/userpanel.php";
                 ?>
             </div>
 		</div>
@@ -69,6 +69,6 @@ include_once("./miki_connect/connect.php");
 		});
 	});
 </script>
-<?php require_once './miki_components/footer.php';?>
+<?php require_once './components/footer.php';?>
 </body>
 </html>

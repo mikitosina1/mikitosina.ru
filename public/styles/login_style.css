@@ -1,0 +1,65 @@
+/*Use Bootstrap-4.3.1*/
+
+html{
+	position: relative;
+}
+
+body{
+    height: 126vh;
+}
+
+/*очистка обтекания (clearfix)*/
+div.clear{clear: both;}
+
+div.container.align-items-center{
+}
+
+.row{
+	/*height: 100vh;*/
+}
+
+.col-sm{
+	/*margin-top: 25vh;*/
+}
+
+.main_content{
+	margin-top: 4vh;
+}
+
+div.form_components{
+	text-align: center;
+	height: 100%;
+	padding-top: 25vh;
+}
+
+.h3{
+	background-color: rgba(18, 0, 36, 0.44);
+	border-radius: 3px;
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+}
+
+p{
+	background-color: rgba(18, 0, 36, 0.22);
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+
+}
+
+.btn .btn_log_login{
+	background-color: rgba(18, 0, 36, 0.88);
+}
+
+#errorBlock{
+	visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 450px){
+
+}
+
+@media (max-width: 1200px){
+
+}

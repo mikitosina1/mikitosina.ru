@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php require_once './miki_components/head.php';?>
+<?php require_once './components/head.php';?>
 
 <body>
-<?php require_once './miki_components/nav_panel.php';?>
+<?php require_once './components/nav_panel.php';?>
 <div class="row">
 	<div class="col-lg">
 		<a class="btn btn-warning btn-lg" href="./news.php" role="button">Назад к новостям</a>

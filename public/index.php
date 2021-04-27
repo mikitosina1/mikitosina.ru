@@ -4,19 +4,19 @@
 
 	session_start();
 
-	require_once "./miki_components/functions.php";
+	require_once "./components/main_func.php";
     require_once "./1homework/strplus/strplus1.php";
     require_once "./learn.php";
-    require_once "./miki_connect/connect.php";
+    require_once "./connect/connect.php";
 
 ?>
 <!DOCTYPE HTML>
 <html lang="ru">
     <head>
-        <?php require_once "./miki_components/head.php";?>
+        <?php require_once "./components/head.php";?>
     </head>
 	<body>
-		<?php require_once "./miki_components/nav_panel.php";?>
+		<?php require_once "./components/nav_panel.php";?>
 		<div class="container-fluid main_content">
 			<div class="row cell_content">
 				<div class="col-sm-2"></div>
@@ -48,16 +48,16 @@
 				</div>
 				<div class="col-sm-3 mt-4 d-flex align-items-end flex-column r_side_content login_n_chat">
                     <div class="col">
-                            <?php require_once "./miki_components/userpanel.php";?>
+                            <?php require_once "./components/userpanel.php";?>
                     </div>
                     <div class="col mt-3 chat__inner">
-					    <?php require "./miki_components/chat.php";?>
+					    <?php require "./components/chat.php";?>
                     </div>
 				</div>
 			</div>
 		</div>
         <footer>
-            <?php require_once "./miki_components/footer.php";?>
+            <?php require_once "./components/footer.php";?>
         </footer>
 	</body>
 </html>

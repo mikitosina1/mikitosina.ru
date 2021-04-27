@@ -16,7 +16,7 @@
     exit();
   }
 
-  require_once '../miki_connect/connect.php';
+  require_once '../connect/connect.php';
 
   $sql = 'INSERT INTO articles(title, intro, text, date, avtor) VALUES(?, ?, ?, ?, ?)';
   $query = $pdo->prepare($sql);

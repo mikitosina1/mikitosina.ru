@@ -4,23 +4,23 @@ ini_set("display_errors", 1);
 
 session_start();
 
-require_once "./miki_components/functions.php";	
-include("./miki_connect/connect.php");
+require_once "./components/main_func.php";	
+include("./connect/connect.php");
 ?>
 
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
-    <?php require_once './miki_components/head.php';?>
-    <link rel="stylesheet" href="./miki_styles/contacts_style.css" media="all">
+    <?php require_once './components/head.php';?>
+    <link rel="stylesheet" href="./styles/contacts_style.css" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
 </head>
 <body>
 
-<?php require_once './miki_components/nav_panel.php';?>
+<?php require_once './components/nav_panel.php';?>
 <div class="row about"> 
 	<div class="col-lg-4 col-md-4 col-sm-12">
-		<img src="./miki_styles/imfphotos/photoabout.jpg" class="img-fluid" alt="mp">
+		<img src="./styles/imfphotos/photoabout.jpg" class="img-fluid" alt="mp">
 	</div>
 	<div class="col-lg-8 col-md-8 col-sm-12 desc">
 		<br>
@@ -64,7 +64,7 @@ include("./miki_connect/connect.php");
 	</div>
 </div>
 <footer>
-    <?php require_once 'miki_components/footer.php';?>
+    <?php require_once 'components/footer.php';?>
 </footer>
 </body>
 

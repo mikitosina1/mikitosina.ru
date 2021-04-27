@@ -1,0 +1,58 @@
+/*Use Bootstrap-4.3.1*/
+
+html{
+	min-height: 100vh;
+	position: relative;
+}
+
+body {
+	background-color: #7f5a83;
+	background-attachment: fixed;
+	background: -webkit-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: -moz-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	font: 16px/24px Arial, Tahoma, sans-serif;
+}
+
+/*очистка обтекания (clearfix)*/
+div .clear{clear: both;}
+a{color: whitesmoke;}
+
+.main_content{
+	background-color: rgba(18, 0, 36, 0.6);
+	width: 70%;
+	min-height: calc(100vh - 75px);
+	height: 120vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.news_labels{
+	background-color: rgba(255, 255, 255, 0.21);
+	border-radius: 3px;
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+	margin-top: 0.3em;
+}
+
+.side_user_panel{
+	margin-top: 1%;
+	margin-bottom: 2%;
+	width: 250px;
+	height: 250px;
+}
+
+.white-form-name{
+	color: #ffffff;
+	margin: 0;
+}
+
+.form-control.list{
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+
+.alert.alert-danger{
+	display: none;
+}

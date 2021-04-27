@@ -14,20 +14,21 @@ if($error != '') {
     exit();
 }
 
-$hash = "sdfjsdkhgs234jh324SDk";
-$pass = md5($u_password . $hash);
+require_once '../components/main_func.php';
 
-require_once '../miki_connect/connect.php';
+$pass = hashPassword($u_password);
+
+require_once '../connect/connect.php';
 
 $sql = 'SELECT `user_id` FROM `start_users` WHERE `u_login` = :u_login && `u_password` = :u_password';
 $query = $pdo->prepare($sql);
-$query->execute(['u_login' => $u_login, 'u_password' => $u_password]);
+$query->execute(['u_login' => $u_login, 'u_password' => $pass]);
 
 $user = $query->fetch(PDO::FETCH_OBJ);
 if($user->user_id == 0)
     echo 'Такого пользователя не существует';
 else {
-    setcookie('log', $u_login, time() + 3600 * 24 * 30, "/");
+    setcookie('u_login', $u_login, time() + 3600 * 24 * 30, "/");
     echo 'Готово';
 }
 ?>

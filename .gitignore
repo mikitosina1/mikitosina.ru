@@ -3,20 +3,15 @@ composer.lock
 .cache
 .idea
 _.htaccess
-mikitosina.ru.access.log
-mikitosina.ru.access.log.20200229
-mikitosina.ru.access.log.20200301
-mikitosina.ru.access.log.20200302
-mikitosina.ru.error.log
-mikitosina.ru.error.log.20200229
-mikitosina.ru.error.log.20200301
-mikitosina.ru.error.log.20200302
 robots.txt
 adminer422.php
 adminer.css
 admin-pages/
-miki_connect/
-miki_styles/images
-miki_styles/imphotos
+connect/connect.php
+connect/connectDBreg.php
+styles/images
+styles/imphotos
 miki_components/functions.php
-miki_components/functions2.php
+components/main_func.php
+znews_components (old)
+zsherwood-bar.ru

@@ -1,0 +1,121 @@
+/*Use Bootstrap-4.3.1*/
+
+html{
+	min-height: 100vh;
+	position: relative;
+}
+
+body{
+	background-color: #7f5a83;
+	background-attachment: fixed;
+	background: -webkit-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: -moz-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	background: linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
+	font: 16px/24px Arial, Tahoma, sans-serif;
+}
+
+a{color: whitesmoke;}
+.hidden{display: none;}
+/*очистка обтекания (clearfix)*/
+div .clear{clear: both;}
+
+.main_content{
+	background-color: rgba(18, 0, 36, 0.6);
+	width: 70%;
+	min-height: calc(100vh - 75px);
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.news_labels{
+	//background-color: rgba(255, 255, 255, 0.33);
+	border-radius: 3px;
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+	margin-top: 0.3em;
+}
+
+.post__text:first-child{
+	margin-top:0px;
+}
+
+.post__text{
+	background-color: rgba(255, 255, 255, 0.11);
+	border-radius: 8px;
+	color: #e9ecef;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+	margin-top: 0.5em;
+	width: 100%;
+	padding: 20px;
+}
+
+.side_user_panel{
+	margin-top: 1%;
+	margin-bottom: 2%;
+	width: 150px;
+	height: 150px;
+}
+
+.white-form-name{
+	color: #ffffff;
+	margin: 0;
+}
+
+.form-control.list{
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+
+.check_session{
+	color: red;
+}
+
+.row .login_n_chat{
+	background-color: rgba(255, 255, 255, 0.11);
+	border-radius: 8px;
+	padding-top: 30px;
+}
+
+.alert.alert-danger{
+	display: none;
+}
+
+.chat__inner{
+	padding-left: 0px;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+@media (max-width: 450px){
+	.main_content{
+		width:23em;
+	}
+	
+	.chat__inner{
+		padding-left: 14px;
+	}
+}
+
+@media (max-width: 1200px){
+
+}
