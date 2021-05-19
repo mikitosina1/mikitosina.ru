@@ -1,11 +1,13 @@
 /*Use Bootstrap-4.3.1*/
 
-html{
+html,body{
+	min-height: 100vh;
 	position: relative;
 }
 
 body{
-    height: 126vh;
+	display: flex;
+	flex-direction: column;
 }
 
 /*очистка обтекания (clearfix)*/
@@ -23,7 +25,7 @@ div.container.align-items-center{
 }
 
 .main_content{
-	margin-top: 4vh;
+	flex: 1 0 auto;
 }
 
 div.form_components{

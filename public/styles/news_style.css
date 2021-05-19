@@ -1,11 +1,13 @@
 /*Use Bootstrap-4.3.1*/
 
-html{
-	min-height: 100vh;
+html,body{
+	min-height: 100%;
 	position: relative;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	background-color: #7f5a83;
 	background-attachment: fixed;
 	background: -webkit-linear-gradient(0deg, rgb(190, 154, 207) 4%, rgb(86, 181, 184) 95%);
@@ -21,8 +23,7 @@ a{color: whitesmoke;}
 .main_content{
 	background-color: rgba(18, 0, 36, 0.6);
 	width: 70%;
-	min-height: calc(100vh - 75px);
-	height: 120vh;
+	flex: 1 0 auto;
 	margin-left: auto;
 	margin-right: auto;
 }

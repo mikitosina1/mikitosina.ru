@@ -75,23 +75,22 @@ input.text,textarea {
 
 .message_text{
     color: white;
-    left: 0;
-    border: 2px solid #120024;
-    border-radius: 1.5px;
-    background-color: #343a40;
+    border-bottom: 1.75px solid lightseagreen;
+    border-left: 1.75px solid lightseagreen;
+    background-color: rgba(18, 0, 36, 0.2);
     height: 100%;
 }
 
 .message_date{
-    font-size: 0.7em;
-    border-top-width: 0.5px;
+    font-size: 0.55em;
+    border-top-width: 0.6px;
     border-top-style: solid;
     border-top-color: rgba(18, 0, 36, 0.7);
 }
 
 .comment_block_container{
     color: white;
-    background-color: #343a40;
+    background-color: rgba(18, 0, 36, 0.7);
     top: 0;
     width: 300px;
     height: 45%;
@@ -103,11 +102,9 @@ input.text,textarea {
 }
 
 .comment{
-    left: 0;
-    width: 100%;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(18, 0, 36, 0.7);
+    width: 96%;
+    margin-left: 2%;
+    border: 2.5px solid rgba(18, 0, 36, 0.8);
 }
 
 .form_input_message{

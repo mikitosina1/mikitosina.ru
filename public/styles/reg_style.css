@@ -1,3 +1,13 @@
+html,body{
+	min-height: 100%;
+	position: relative;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
 .container.reg_form_container{
 	text-align: center;
 	vertical-align: middle;
@@ -9,6 +19,7 @@
 
 .row{
 	text-align: center;
+	flex: 1 0 auto;
 }
 
 label{
