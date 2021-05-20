@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
 	<div class="logo__part">
 		<a class="navbar-brand" href="/">
-			<img src="../styles/images/blog.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
+<!--			<img src="../styles/images/blog.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">-->
 			<div class="title__blog">Mikitosina's Blog :D</div>
 		</a>
 	</div>
@@ -30,7 +30,7 @@
 					<a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
 					<a class="dropdown-item" href="../1homework/2hw/index.php">parser</a>
 					<a class="dropdown-item" href="../1homework/3hw/index.php">3hw</a>
-					<a class="dropdown-item" href="../work_project/index.html">Тиснение</a>
+<!--					<a class="dropdown-item" href="../work_project/index.html">Тиснение</a>-->
 					<a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
 				</div>
 			</li>
@@ -39,7 +39,7 @@
 				<a class="btn btn-outline-primary Log_button" href="../login/login.php">Login</a>
 			</li>
 			<li class="nav-item reggg">
-				<a class="btn btn-warning Reg_button" href="../registration/reg.php">Registration</a>
+				<a class="btn Reg_button" href="../registration/reg.php">Registration</a>
 			</li>
 			<?php else:?>
 				<li class="nav-item">

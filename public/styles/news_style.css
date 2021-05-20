@@ -16,6 +16,10 @@ body {
 	font: 16px/24px Arial, Tahoma, sans-serif;
 }
 
+.r_side_content{
+	padding-left: 11em;
+}
+
 /*очистка обтекания (clearfix)*/
 div .clear{clear: both;}
 a{color: whitesmoke;}
@@ -56,4 +60,9 @@ a{color: whitesmoke;}
 
 .alert.alert-danger{
 	display: none;
+}
+
+.alert-warning{
+	width: 300px;
+	height: 26%;
 }

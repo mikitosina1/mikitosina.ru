@@ -82,10 +82,11 @@ input.text,textarea {
 }
 
 .message_date{
+    width: 15em;
     font-size: 0.55em;
     border-top-width: 0.6px;
     border-top-style: solid;
-    border-top-color: rgba(18, 0, 36, 0.7);
+    border-top-color: lightseagreen;
 }
 
 .comment_block_container{
@@ -104,7 +105,6 @@ input.text,textarea {
 .comment{
     width: 96%;
     margin-left: 2%;
-    border: 2.5px solid rgba(18, 0, 36, 0.8);
 }
 
 .form_input_message{
