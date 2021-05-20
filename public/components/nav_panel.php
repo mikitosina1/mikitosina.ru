@@ -1,3 +1,7 @@
+<?php
+$user_handler = new typicalUser;
+?>
+
 <nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
 	<div class="logo__part">
 		<a class="navbar-brand" href="/">
@@ -34,7 +38,7 @@
 					<a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
 				</div>
 			</li>
-			<?php if (is_guest()):?>
+			<?php if ($user_handler->is_guest()):?>
 			<li class="nav-item loggg">
 				<a class="btn btn-outline-primary Log_button" href="../login/login.php">Login</a>
 			</li>

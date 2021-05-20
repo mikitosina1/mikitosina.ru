@@ -1,7 +1,12 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-if (isset($_SESSION['u_login']) && isset($_SESSION['u_password']) && checkUser($_SESSION['u_login'], $_SESSION['u_password'])) {
+
+require_once ('./connect/connect.php');
+require_once ('./components/main_func.php');
+$user_handler = new typicalUser;
+
+if (isset($_SESSION['u_login']) && isset($_SESSION['u_password'])/* && $user_handler->checkUser($_SESSION['u_login'], $_SESSION['u_password'])*/) {
 	echo "<p>Здравствуйте, <b>" . $_SESSION['u_login'] . "</b>!</p><br>";
 	echo "<a href='../login/logout.php'>Выйти из учётной записи</a>";
 }

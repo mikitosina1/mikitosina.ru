@@ -5,6 +5,7 @@ require_once "main_func.php";
 // обращение к БД за комментарием
 $mes_result = mysqli_query($db, "SELECT * FROM messages");
 $comment = mysqli_fetch_array($mes_result);
+$user_handler = new typicalUser();
 ?>
 <!-- вывод -->
 <div class="comment_block_container">
@@ -23,7 +24,7 @@ $comment = mysqli_fetch_array($mes_result);
 	<?php } while($comment = mysqli_fetch_array($mes_result));?>
 	<hr>
 </div>
-<?php if (is_guest()):?>
+<?php if ($user_handler->is_guest()):?>
 <br>
 <div class="alert alert-warning" role="alert">
 	<img src="./styles/images/lolpic.png" style="width: 75%; height: 70%;" alt="">

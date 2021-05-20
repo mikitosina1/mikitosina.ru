@@ -4,8 +4,8 @@ ini_set("display_errors", 1);
 
 session_start();
 
-require_once "./components/main_func.php";	
-include("./connect/connect.php");
+require_once "./components/main_func.php";
+require_once('./connect/connect.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -54,11 +54,11 @@ include("./connect/connect.php");
 			<div class="social whatsapp">
 				<a href=" https://wa.me/89533610771" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a>
 			</div>
-        <div class="nick__frame">
-            <a href="https://nick-name.ru/nickname/id1662492/">
-                <img src="https://nick-name.ru/img.php?id=1662492&sert=1" alt="Сертификат на никнейм mikitosina1, зарегистрирован на https://vk.com/mikitosina" border="0" style="width: 25em; height: 15em;"/>
-            </a>
-        </div>
+            <div class="nick__frame">
+                <a href="https://nick-name.ru/nickname/id1662492/">
+                    <img src="https://nick-name.ru/img.php?id=1662492&sert=1" alt="Сертификат на никнейм mikitosina1, зарегистрирован на https://vk.com/mikitosina" border="0" style="width: 25em; height: 15em;"/>
+                </a>
+            </div>
         </p>
 <!--        --><?php //require_once './miki_components/userpanel.php';?>
 	</div>
