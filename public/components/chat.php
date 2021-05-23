@@ -3,28 +3,28 @@
 <?php
 require_once (realpath(dirname(__FILE__) . '/main_func.php'));
 require_once (realpath(dirname(__FILE__) . '/../connect/connect.php'));
-$chat_holder = new chatForUsers;
-$comment = $chat_holder->showMessages();
-
-var_dump($comment);
-$user_handler = new typicalUser;
+$message_ar = array();
+$user_handler = new typicalUser();
+$chat_class_holder = new chatForUsers();
+$mes_query = $chat_class_holder->showMessages();
+$message_ar = $mes_query;
 ?>
 <!-- вывод -->
 <div class="comment_block_container">
-<!--	--><?php //do { ?>
-	<div class="comment">
-		<strong><?=$comment->authors_login;?> :</strong>
-		<br>
-		<div class="message_text">
-			<?=$comment->message;?>
-			<br>
-			<div class="message_date">
-				<?=$comment->date;?>
-			</div>
-		</div>
-	</div>
-<!--	--><?php //} while($comment);?>
-	<hr>
+	<?php foreach ($message_ar as $k => $v) {?>
+        <div class="comment">
+            <strong><?= $v['authors_login'];?> :</strong>
+            <br>
+            <div class="message_text">
+                <?= $v['message'];?>
+                <br>
+                <div class="message_date">
+                    <?= $v['date'];?>
+                </div>
+            </div>
+        </div>
+        <hr>
+	<?php }?>
 </div>
 <?php if ($user_handler->is_guest()):?>
 <br>

@@ -54,11 +54,9 @@ class chatForUsers {
 
     public function showMessages() {
         $query = "SELECT * FROM `messages`";
-        $db_class_handler = new dataBasetypical;
-        $message_ar[] = $db_class_handler->query($query)->fetchAll();
-//        $message_author = $message_ar['authors_login'];
-//        $message = $message_ar['message'];
-//        $message_date = $message_ar['authors_date'];
+        $db_class_handler = new dataBasetypical();
+        $message_ar = $db_class_handler->query($query)->fetchAll();
+        return $message_ar;
     }
 
 }

@@ -66,34 +66,6 @@ class dataBasetypical{
         return $this;
     }
 
-    public function close() {
-        return $this->connection->close();
-    }
-
-    public function error($error) {
-        if ($this->show_errors) {
-            exit($error);
-        }
-    }
-
-    public function fetchArray() {
-        $params = array();
-        $row = array();
-        $meta = $this->query->result_metadata();
-        while ($field = $meta->fetch_field()) {
-            $params[] = &$row[$field->name];
-        }
-        call_user_func_array(array($this->query, 'bind_result'), $params);
-        $result = array();
-        while ($this->query->fetch()) {
-            foreach ($row as $key => $val) {
-                $result[$key] = $val;
-            }
-        }
-        $this->query->close();
-        $this->query_closed = TRUE;
-        return $result;
-    }
     public function fetchAll($callback = null) {
         $params = array();
         $row = array();
@@ -118,6 +90,36 @@ class dataBasetypical{
         $this->query->close();
         $this->query_closed = TRUE;
         return $result;
+    }
+
+    public function fetchArray() {
+        $params = array();
+        $row = array();
+        $meta = $this->query->result_metadata();
+        while ($field = $meta->fetch_field()) {
+            $params[] = &$row[$field->name];
+        }
+        call_user_func_array(array($this->query, 'bind_result'), $params);
+        $result = array();
+        while ($this->query->fetch()) {
+            foreach ($row as $key => $val) {
+                $result[$key] = $val;
+            }
+        }
+        $this->query->close();
+        $this->query_closed = TRUE;
+        return $result;
+    }
+
+    public function error($error) {
+        if ($this->show_errors) {
+            exit($error);
+        }
+    }
+
+    public function numRows() {
+        $this->query->store_result();
+        return $this->query->num_rows;
     }
 
     private function _gettype($var) {

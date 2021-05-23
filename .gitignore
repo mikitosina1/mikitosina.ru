@@ -12,6 +12,7 @@ adminer.css
 admin-pages/
 connect/connect.php
 connect/connectDBreg.php
+components/main_func.php
 styles/images
 styles/imphotos
 miki_components/functions.php
