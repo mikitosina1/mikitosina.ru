@@ -5,8 +5,8 @@ require_once "../components/main_func.php";
 
 session_start();
 
-$u_login = mysqli_real_escape_string(trim(filter_var($_POST['u_login'], FILTER_SANITIZE_STRING)));
-$u_password = mysqli_real_escape_string(trim(filter_var($_POST['u_password'], FILTER_SANITIZE_STRING)));
+$u_login = htmlspecialchars(trim(filter_var($_POST['u_login'], FILTER_SANITIZE_STRING)), $falgs = ENT_QUOTES);
+$u_password = htmlspecialchars(trim(filter_var($_POST['u_password'], FILTER_SANITIZE_STRING)), $falgs = ENT_QUOTES);
 $u_password = hashPassword($u_password);
 $error = '';
 if(strlen($u_login) <= 3)
@@ -30,5 +30,5 @@ if(checkUser($u_login, $u_password)) {
 }
 else $_SESSION['auth_error'] = 1;
 
-header("Location: http://mikitosina.ru");
+header("Location: https://mikitosina.ru");
 ?>

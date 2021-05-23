@@ -1,27 +1,29 @@
 <link rel="stylesheet" href="../styles/chat_style.css" media="all">
 
 <?php
-require_once "main_func.php";
-// обращение к БД за комментарием
-$mes_result = mysqli_query($db, "SELECT * FROM messages");
-$comment = mysqli_fetch_array($mes_result);
-$user_handler = new typicalUser();
+require_once (realpath(dirname(__FILE__) . '/main_func.php'));
+require_once (realpath(dirname(__FILE__) . '/../connect/connect.php'));
+$chat_holder = new chatForUsers;
+$comment = $chat_holder->showMessages();
+
+var_dump($comment);
+$user_handler = new typicalUser;
 ?>
 <!-- вывод -->
 <div class="comment_block_container">
-	<?php do { ?>
+<!--	--><?php //do { ?>
 	<div class="comment">
-		<strong><?=$comment['authors_login'];?> :</strong>
+		<strong><?=$comment->authors_login;?> :</strong>
 		<br>
 		<div class="message_text">
-			<?=$comment['message'];?>
+			<?=$comment->message;?>
 			<br>
 			<div class="message_date">
-				<?=$comment['date'];?>
+				<?=$comment->date;?>
 			</div>
 		</div>
 	</div>
-	<?php } while($comment = mysqli_fetch_array($mes_result));?>
+<!--	--><?php //} while($comment);?>
 	<hr>
 </div>
 <?php if ($user_handler->is_guest()):?>

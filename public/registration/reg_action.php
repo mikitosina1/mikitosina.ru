@@ -12,17 +12,18 @@ $trim_u_login = trim(filter_var($_POST['u_login'], FILTER_SANITIZE_STRING));
 $trim_u_password = trim(filter_var($_POST['u_password'], FILTER_SANITIZE_STRING));
 $trim_username = trim(filter_var($_POST['Fname'], FILTER_SANITIZE_STRING));
 $trim_userlastname = trim(filter_var($_POST['Lname'], FILTER_SANITIZE_STRING));
+$u_age = htmlspecialchars($_POST['u_age'], $falgs = ENT_QUOTES);
+$u_info = htmlspecialchars($_POST['u_info'], $falgs = ENT_QUOTES);
 
 $user_handler = new typicalUser();
 
-$u_email = htmlspecialchars($trim_u_email);
-$u_login = htmlspecialchars($trim_u_login);
-$pre_u_password = htmlspecialchars($trim_u_password);
+$u_email = htmlspecialchars($trim_u_email, $falgs = ENT_QUOTES);
+$u_login = htmlspecialchars($trim_u_login, $falgs = ENT_QUOTES);
+$pre_u_password = htmlspecialchars($trim_u_password, $falgs = ENT_QUOTES);
 $u_password = $user_handler->hashPassword($pre_u_password);
-$username = htmlspecialchars($trim_username);
-$userlastname = htmlspecialchars($trim_userlastname);
-$u_age = htmlspecialchars($_POST['u_age']);
-$u_info = htmlspecialchars($_POST['u_info']);
+$username = htmlspecialchars($trim_username, $falgs = ENT_QUOTES);
+$userlastname = htmlspecialchars($trim_userlastname, $falgs = ENT_QUOTES);
+var_dump($u_info);
 $user_role = 'user';
 $u_ip = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
 
@@ -34,8 +35,8 @@ $params =[
     'userlastname' => $userlastname,
     'u_age' => $u_age,
     'u_info' => $u_info,
-    'user_role' => $user_role,
-    'u_ip' => $u_ip,
+    'role' => $user_role,
+    'user_ip' => $u_ip,
 ];
 
 if (strlen($u_email) <= 3)
@@ -49,5 +50,3 @@ else if (strlen($username) <= 3)
 $user_handler->regUser($params);
 
 header("https://mikitosina.ru");
-
-?>

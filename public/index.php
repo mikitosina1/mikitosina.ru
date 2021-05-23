@@ -4,10 +4,10 @@
 
 	session_start();
 
-	require_once "./components/main_func.php";
-    require_once "./1homework/strplus/strplus1.php";
-    require_once "./learn.php";
-    require_once "./connect/connect.php";
+	require_once (realpath(dirname(__FILE__) . '/components/main_func.php'));
+    require_once (realpath(dirname(__FILE__) . '/connect/connect.php'));
+    require_once ('./1homework/strplus/strplus1.php');
+    require_once ('./learn.php');
 
 ?>
 <!DOCTYPE HTML>

@@ -4,7 +4,7 @@ ini_set("display_errors", 1);
 
 session_start();
 
-require_once "./components/main_func.php";
+//require_once ('./components/main_func.php');
 require_once('./connect/connect.php');
 ?>
 
@@ -28,8 +28,8 @@ require_once('./connect/connect.php');
 		<br>
 		<br>
 		<h3><span style="color: #10828C;">▍./Junior/web-dev/З.Никита.php;</span></h3>
-		<p>
-			Здравствуй!<br>
+		<div class="p">
+			Здравствуй!</br>
 			Волей случая (или мы с тобой знакомы) ты попал на мой ресурс. </br>
 			Смысл этого маленького блога - показать на примере технологии, которые я освоил, как мой полигон для учёбы. </br>
             Открытий и экспериментов над моими знаниями, умениями и пониманием технических ресурсов, которыми я обладаю на данный момент.</br>
@@ -59,7 +59,7 @@ require_once('./connect/connect.php');
                     <img src="https://nick-name.ru/img.php?id=1662492&sert=1" alt="Сертификат на никнейм mikitosina1, зарегистрирован на https://vk.com/mikitosina" border="0" style="width: 25em; height: 15em;"/>
                 </a>
             </div>
-        </p>
+        </div>
 <!--        --><?php //require_once './miki_components/userpanel.php';?>
 	</div>
 </div>

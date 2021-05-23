@@ -1,4 +1,5 @@
 <?php
+require_once (realpath(dirname(__FILE__) . '/../components/main_func.php'));
 $user_handler = new typicalUser;
 ?>
 

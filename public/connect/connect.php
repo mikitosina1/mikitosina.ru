@@ -1,19 +1,25 @@
 <?php
-//require_once ('../components/main_func.php');
-	$db_host = "localhost";
-	$db_user = "root";
-	$db_password = "F6gFqcXEJfs7nd7R";
-    $db = mysqli_connect($db_host,$db_user,$db_password) OR DIE("Не могу создать соединение ");
-	mysqli_select_db($db, "mikitosinaru");
-	mysqli_query($db, "SET NAMES 'utf8'");
-	//подключение к базе данных
-    return $db;
 
 class dataBasetypical{
-    protected $connection;
+    /**
+     * @var $connection string полный запрос
+     */
+    private $connection;
+    /**
+     * @var $query string хранилище запроса в БД
+     */
     protected $query;
+    /**
+     * @var $show_errors bool вывод ошибок
+     */
     protected $show_errors = TRUE;
+    /**
+     * @var $query_closed bool проверка на закрытие запроса
+     */
     protected $query_closed = TRUE;
+    /**
+     * @var $query_count int подсчёт обращений
+     */
     public $query_count = 0;
 
     public function __construct($dbhost = 'localhost', $dbuser = 'root', $dbpass = 'F6gFqcXEJfs7nd7R', $dbname = 'mikitosinaru', $charset = 'utf8'){
@@ -70,6 +76,50 @@ class dataBasetypical{
         }
     }
 
+    public function fetchArray() {
+        $params = array();
+        $row = array();
+        $meta = $this->query->result_metadata();
+        while ($field = $meta->fetch_field()) {
+            $params[] = &$row[$field->name];
+        }
+        call_user_func_array(array($this->query, 'bind_result'), $params);
+        $result = array();
+        while ($this->query->fetch()) {
+            foreach ($row as $key => $val) {
+                $result[$key] = $val;
+            }
+        }
+        $this->query->close();
+        $this->query_closed = TRUE;
+        return $result;
+    }
+    public function fetchAll($callback = null) {
+        $params = array();
+        $row = array();
+        $meta = $this->query->result_metadata();
+        while ($field = $meta->fetch_field()) {
+            $params[] = &$row[$field->name];
+        }
+        call_user_func_array(array($this->query, 'bind_result'), $params);
+        $result = array();
+        while ($this->query->fetch()) {
+            $r = array();
+            foreach ($row as $key => $val) {
+                $r[$key] = $val;
+            }
+            if ($callback != null && is_callable($callback)) {
+                $value = call_user_func($callback, $r);
+                if ($value == 'break') break;
+            } else {
+                $result[] = $r;
+            }
+        }
+        $this->query->close();
+        $this->query_closed = TRUE;
+        return $result;
+    }
+
     private function _gettype($var) {
         if (is_string($var)) return 's';
         if (is_float($var)) return 'd';
@@ -77,4 +127,3 @@ class dataBasetypical{
         return 'b';
     }
 }
-?>

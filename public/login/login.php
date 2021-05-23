@@ -4,7 +4,8 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 session_start();
 require_once "../connect/connect.php";
-require_once "../components/main_func.php";
+require_once (realpath(dirname(__FILE__) . '/../components/main_func.php'));
+$user_handler = new typicalUser;
 ?>
 
 <html lang="ru">
@@ -21,7 +22,7 @@ require_once "../components/main_func.php";
 	<div class="row row__content">
 		<div class="col-sm"></div>
 		<div class="col-sm form_components">
-			<?php if (is_guest()):?>
+			<?php if ($user_handler->is_guest()):?>
 				<form action="login_action.php" class="form-signin" method="post">
 					<h1 class="h3 mb-3 font-weight-normal">Войти в учётную запись</h1>
 					<br>
