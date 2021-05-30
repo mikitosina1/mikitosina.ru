@@ -92,6 +92,10 @@ class dataBasetypical{
         return $result;
     }
 
+    public function close() {
+        return $this->connection->close();
+    }
+
     public function fetchArray() {
         $params = array();
         $row = array();
