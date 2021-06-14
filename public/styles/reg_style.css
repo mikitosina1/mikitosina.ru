@@ -24,12 +24,12 @@ body{
 
 label{
 	margin-top: 5px;
-	border-radius: 3px;
+	padding: 5px 15px;
+	border-radius: 10px;
 	color: #e9ecef;
 	text-shadow: #000000 1px 1px;
 	font-size: 17px;
 	background-color: rgba(18, 0, 36, 0.44);
-	width: 12em;
 }
 
 .col-sm.reg_form_content form{

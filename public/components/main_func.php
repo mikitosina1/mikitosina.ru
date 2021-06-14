@@ -21,7 +21,6 @@ class typicalUser{
         $query = "INSERT INTO start_users (`".$into[0]."`,`".$into[1]."`,`".$into[2]."`,`".$into[3]."`,`".$into[4]."`,`".$into[5]."`,`".$into[6]."`,`".$into[7]."`,`".$into[8]."`) VALUES ('".$value[0]."','".$value[1]."','".$value[2]."','".$value[3]."','".$value[4]."','".$value[5]."','".$value[6]."','".$value[7]."','".$value[8]."')";
         $db_class_handler = new dataBasetypical();
         $db_class_handler -> query($query);
-//        $db_class_handler -> close();
     }
 
     function loginUser($u_login, $u_password) {
