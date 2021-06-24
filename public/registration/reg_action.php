@@ -1,9 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-
-session_start();
-
 require_once "../components/head.php";
 require_once "../components/main_func.php";
 require_once "../connect/connect.php";
@@ -14,52 +11,36 @@ $trim_u_password = trim(filter_var($_POST['u_password'], FILTER_SANITIZE_STRING)
 $trim_u_password2 = trim(filter_var($_POST['u_password2'], FILTER_SANITIZE_STRING));
 $trim_username = trim(filter_var($_POST['Fname'], FILTER_SANITIZE_STRING));
 $trim_userlastname = trim(filter_var($_POST['Lname'], FILTER_SANITIZE_STRING));
-$u_age = htmlspecialchars($_POST['u_age'], $falgs = ENT_QUOTES);
-$u_info = htmlspecialchars($_POST['u_info'], $falgs = ENT_QUOTES);
+$u_age = htmlspecialchars($_POST['u_age'], ENT_QUOTES);
+$u_info = htmlspecialchars($_POST['u_info'], ENT_QUOTES);
 
 $user_handler = new typicalUser();
 
-$u_email = htmlspecialchars($trim_u_email, $falgs = ENT_QUOTES);
-$u_login = htmlspecialchars($trim_u_login, $falgs = ENT_QUOTES);
-$pre_u_password = htmlspecialchars($trim_u_password, $falgs = ENT_QUOTES);
+$u_email = htmlspecialchars($trim_u_email, ENT_QUOTES);
+$u_login = htmlspecialchars($trim_u_login, ENT_QUOTES);
+$pre_u_password = htmlspecialchars($trim_u_password, ENT_QUOTES);
 $u_password = $user_handler->hashPassword($pre_u_password);
-$username = htmlspecialchars($trim_username, $falgs = ENT_QUOTES);
-$userlastname = htmlspecialchars($trim_userlastname, $falgs = ENT_QUOTES);
+$username = htmlspecialchars($trim_username, ENT_QUOTES);
+$userlastname = htmlspecialchars($trim_userlastname, ENT_QUOTES);
 $user_role = 'user';
 $u_ip = isset($_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
 
-//$user_handler->issetUser($u_email, $u_login, $username, $userlastname);
+$is_isset_user = $user_handler->issetUser($u_email, $u_login, $username, $userlastname);
 
-//if (strlen($u_email) <= 3)
-//	die(
-//		"<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>Упс, имейл не соответствует требованиям заполнения</h3></br>
-//		<a href='../' class='btn btn-primary'>На главную</a></br>
-//		<a href='reg.php' class='btn btn-primary'>Предыдущая страница</a>"
-//	);
-//	else
-	if (strlen($u_login) <= 3)
+if (strlen($u_password) <= 7)
 	die(
-		"<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>Упс, ваш логин уже используется или не соответствует требованиям заполнения</h3></br>
-		<a href='../index.php' class='btn btn-primary'>На главную</a></br>
-		<a href='reg.php' class='btn btn-primary'>Предыдущая страница</a>"
-	);
-	else if (strlen($u_password) <= 7)
-	die("<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>Упс, пароль не соответствует требованиям заполнения</h3></br>
+	"<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>Упс, пароль не соответствует требованиям заполнения</h3></br>
 		<a href='../' class='btn btn-primary'>На главную</a></br>
 		<a href='reg.php' class='btn btn-primary'>Предыдущая страница</a>"
 	);
-	else if ($trim_u_password != $trim_u_password2)
-	die("<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>
-		Упс, пароль не соответствует повторному заполнению пароля</h3></br>
+else if ($trim_u_password != $trim_u_password2)
+	die(
+	"<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>
+			Упс, пароль не соответствует повторному заполнению пароля
+		</h3></br>
 		<a href='../' class='btn btn-primary'>На главную</a></br>
 		<a href='reg.php' class='btn btn-primary'>Предыдущая страница</a>"
 	);
-//	else if (strlen($username) <= 3)
-//	die(
-//		"<h3 style='text-align: center; margin-top: 2em; background: deepskyblue;'>Упс, имя не соответствует требованиям заполнения или менее 3х знаков</h3></br>
-//		<a href='../' class='btn btn-primary'>На главную</a></br>
-//		<a href='reg.php' class='btn btn-primary'>Предыдущая страница</a>"
-//	);
 
 $params = array();
 $params =[
@@ -73,8 +54,11 @@ $params =[
 	'role' => $user_role,
 	'user_ip' => $u_ip,
 ];
-$user_handler->regUser($params);
-echo "<script>alert( 'Регистрация прошла успешно! </br> Через секунду перенесу на Главную.');</script>";
-sleep(5);
+if ($is_isset_user == false){
+	$user_handler->regUser($params);
+	echo "<script>alert( 'Регистрация прошла успешно! </br> Через секунду перенесу на Главную.');</script>";
+	sleep(5);
+	
+}
 header("Location: https://mikitosina.ru");
 exit();

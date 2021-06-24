@@ -1,6 +1,6 @@
 <?php
 require_once (realpath(dirname(__FILE__) . '/../components/main_func.php'));
-$user_handler = new typicalUser;
+$user_handler = new typicalUser();
 ?>
 
 <nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
@@ -39,7 +39,7 @@ $user_handler = new typicalUser;
 					<a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
 				</div>
 			</li>
-			<?php if ($user_handler->is_guest()):?>
+			<?php if ($user_handler->is_guest() == FALSE):?>
 			<li class="nav-item loggg">
 				<a class="btn btn-outline-primary Log_button" href="../login/login.php">Login</a>
 			</li>
@@ -48,7 +48,7 @@ $user_handler = new typicalUser;
 			</li>
 			<?php else:?>
 				<li class="nav-item">
-					<p>Здравствуйте, <b><?=$_SESSION['u_login']?></b>!</p>
+					<p>Здравствуйте, <b><?=$_SESSION['is_guest']?></b>!</p>
 				</li>
 				<li class="nav-item loggg">
 					<a class="btn btn-outline-primary Log_button" href="../u_cabinet">Кабинет</a>

@@ -2,16 +2,18 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-session_start();
-require_once "../connect/connect.php";
 require_once (realpath(dirname(__FILE__) . '/../components/main_func.php'));
-$user_handler = new typicalUser;
+$user_handler = new typicalUser();
+if($user_handler->is_guest() == TRUE){
+	header("Location: https://mikitosina.ru");
+}
+
 ?>
 
 <html lang="ru">
 
 <head>
-    <?php require_once '../components/head.php';?>
+	<?php require_once '../components/head.php';?>
 	<link rel="stylesheet" href="../styles/login_style.css" media="all">
 </head>
 
@@ -22,7 +24,7 @@ $user_handler = new typicalUser;
 	<div class="row row__content">
 		<div class="col-sm"></div>
 		<div class="col-sm form_components">
-			<?php if ($user_handler->is_guest()):?>
+			<?php if ($user_handler->is_guest() == FALSE):?>
 				<form action="login_action.php" class="form-signin" method="post">
 					<h1 class="h3 mb-3 font-weight-normal">Войти в учётную запись</h1>
 					<br>
@@ -47,7 +49,7 @@ $user_handler = new typicalUser;
 </div>
 
 <footer>
-    <?php require_once '../components/footer.php';?>
+	<?php require_once '../components/footer.php';?>
 </footer>
 </body>
 </html>

@@ -1,16 +1,15 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-
-session_start();
-
-require_once "./components/main_func.php";
-include_once("./connect/connect.php");
 ?>
 
 <!DOCTYPE HTML>
 <html lang="ru">
-<?php require_once './components/head.php';?>
+<?php
+require_once './components/head.php';
+require_once "./components/main_func.php";
+include_once("./connect/connect.php");
+?>
 <link rel="stylesheet" href="../styles/news_style.css" media="all">
 <body>
 <?php require_once './components/nav_panel.php';?>

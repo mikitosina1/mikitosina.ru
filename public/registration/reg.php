@@ -1,9 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-session_start();
-require_once "../connect/connect.php";
-require_once "../components/main_func.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,18 +8,28 @@ require_once "../components/main_func.php";
 
 
 <head>
-    <?php require_once "../components/head.php";?>
-    <link rel="stylesheet" href="../styles/reg_style.css" media="all">
+	<?php
+	require_once "../components/head.php";
+	require_once "../connect/connect.php";
+	require_once "../components/main_func.php";
+	?>
+	<link rel="stylesheet" href="../styles/reg_style.css" media="all">
 </head>
 
 <body>
-<?php require_once '../components/nav_panel.php';?>
+<?php
+require_once '../components/nav_panel.php';
+$user_handler = new typicalUser();
+if($user_handler->is_guest() == TRUE){
+	header("Location: https://mikitosina.ru");
+}
+?>
 <div class="container reg_form_container">
 	<div class="row">
 		<div class="col-sm"></div>
 		<div class="col-sm reg_form_content mt-4">
 			<form action="reg_action.php" method="post">
-                <label><p><b style="color: #880000; font-size: 1.5em;">*</b> - очень важные поля, без которых невозможно зарегистрироваться.</p></label>
+				<label><p><b style="color: #880000; font-size: 1.5em;">*</b> - очень важные поля, без которых невозможно зарегистрироваться.</p></label>
 				<label for="u_email">Введите Вашу электронную почту</label>
 				<input type="email" name="u_email" id="u_email" class="form-control">
 
@@ -30,13 +37,13 @@ require_once "../components/main_func.php";
 				<input type="text" name="u_login" id="u_login" class="form-control">
 
 				<label for="u_password"> <strong style="color: #3e8f3e">Пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b> </br>
-                    Не менее 8 символов, заглавные и строчные буквы, цифры </br>
-                                (обязательное условие)
-                </label>
+					Не менее 8 символов, заглавные и строчные буквы, цифры </br>
+								(обязательное условие)
+				</label>
 				<input type="password" name="u_password" id="u_password" class="form-control">
 
-                <label for="u_password2">Повторите <strong style="color: #3e8f3e">пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b></label>
-                <input type="password" name="u_password2" id="u_password2" class="form-control">
+				<label for="u_password2">Повторите <strong style="color: #3e8f3e">пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b></label>
+				<input type="password" name="u_password2" id="u_password2" class="form-control">
 
 				<label for="Fname">Имя</label>
 				<input type="text" name="Fname" id="Fname" class="form-control">
@@ -57,7 +64,7 @@ require_once "../components/main_func.php";
 	</div>
 </div>
 <footer>
-    <?php require_once "../components/footer.php";?>
+	<?php require_once "../components/footer.php";?>
 </footer>
 </body>
 </html>
