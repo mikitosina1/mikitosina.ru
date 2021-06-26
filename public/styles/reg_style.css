@@ -1,16 +1,15 @@
+*{
+	box-sizing: border-box;
+}
+
 html,body{
-	min-height: 100%;
+	min-height: 100vh;
 	position: relative;
 }
 
 body{
 	display: flex;
 	flex-direction: column;
-}
-
-.container.reg_form_container{
-	text-align: center;
-	vertical-align: middle;
 }
 
 .form-control{
@@ -22,28 +21,51 @@ body{
 	flex: 1 0 auto;
 }
 
-label{
-	margin-top: 5px;
+.markplace{
+	width: 100em;
+}
+
+.formpart{
 	padding: 5px 15px;
+}
+
+label{
+	justify-content: center;
+	align-items: center;
+	width: 30em;
+	height: 5em;
+	margin-top: 5px;
+	padding: 1.5em 1em;
 	border-radius: 10px;
 	color: #e9ecef;
 	text-shadow: #000000 1px 1px;
-	font-size: 17px;
+	font-size: 16px;
 	background-color: rgba(18, 0, 36, 0.44);
 }
 
+.passLabel{
+	padding: 0;
+}
+
+input{
+	width: 30em!important;
+}
+
 .col-sm.reg_form_content form{
-	width: 365px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 70em;
 }
 
 .container.reg_form_container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	background-color: rgba(18, 0, 36, 0.6);
-	width: 70%;
-	min-height: calc(100vh - 75px);
-	margin-left: auto;
-	margin-right: auto;
 }
 
 ::-webkit-scrollbar-track

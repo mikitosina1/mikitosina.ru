@@ -52,7 +52,7 @@ div.clear{clear: both;}
 	left: 0;
 	vertical-align: middle;
 }
-.about .desc p{
+.about .desc .p{
 	line-height: 2;
 	color: rgba(255, 255, 255, 1);
 }
@@ -62,17 +62,17 @@ div.clear{clear: both;}
 }
 
 .social a {
-    text-align: center;
-    width: 48px;
-    height: 48px;
-    float: left;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
-    border-radius: 24px;
-    margin: 0 10px 10px 0;
-    padding: 6px;
-    color: #000;
+	text-align: center;
+	width: 48px;
+	height: 48px;
+	float: left;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+	border-radius: 24px;
+	margin: 0 10px 10px 0;
+	padding: 6px;
+	color: #000;
 }
 
 .github a:hover {background: #191919; color: #fff;}
