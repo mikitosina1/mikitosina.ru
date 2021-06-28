@@ -5,10 +5,11 @@ ini_set("display_errors", 1);
 require_once ('main_func.php');
 $user_handler = new typicalUser();
 
-if (isset($_SESSION['u_login']) && isset($_SESSION['u_password'])/* && $user_handler->checkUser($_SESSION['u_login'], $_SESSION['u_password'])*/)
+if (isset($_SESSION['u_login'])/* && $user_handler->checkUser($_SESSION['u_login'], $_SESSION['u_password'])*/)
 {
-	echo "<p>Здравствуйте, <b>" . $_SESSION['u_login'] . "</b>!</p><br>";
-	echo "<a href='../login/logout.php'>Выйти из учётной записи</a>";
+	echo "<p>Как настроение, <b>" . $_SESSION['u_login'] . "</b>? :)</p>
+		<br><a href='../login/logout.php' type='button' class='btn btn-info'>Выйти из учётной записи</a>
+	";
 } else
 {
 	if(isset($_SESSION['auth_error']) && $_SESSION['auth_error'] == 1)

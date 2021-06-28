@@ -40,7 +40,7 @@ if($user_handler->is_guest() == TRUE){
 				<div class="formpart">
 					<label for="u_password" class="passLabel">
 						Придумайте<strong style="color: #3e8f3e"> Пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b>
-						<br>Не менее 8 символов, заглавные и строчные буквы, цифры (обязательное условие)
+						<br><p style="font-size: 0.75em;">Не менее 8 символов, заглавные и строчные буквы, цифры (обязательное условие)</p>
 					</label>
 					<input type="password" name="u_password" id="u_password" class="form-control">
 				</div>

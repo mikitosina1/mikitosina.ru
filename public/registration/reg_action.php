@@ -58,7 +58,7 @@ if ($is_isset_user == false){
 	$user_handler->regUser($params);
 	echo "<script>alert( 'Регистрация прошла успешно! </br> Через секунду перенесу на Главную.');</script>";
 	sleep(5);
-	
 }
 header("Location: https://mikitosina.ru");
+echo "<script>alert( 'Регистрация прошла успешно!');</script>";
 exit();

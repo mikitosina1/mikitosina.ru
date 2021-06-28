@@ -48,7 +48,7 @@ $user_handler = new typicalUser();
 			</li>
 			<?php else:?>
 				<li class="nav-item">
-					<p>Здравствуйте, <b><?=$_SESSION['is_guest']?></b>!</p>
+					<p>Здравствуйте, <b><?=$_SESSION['u_name']?></b>!</p>
 				</li>
 				<li class="nav-item loggg">
 					<a class="btn btn-outline-primary Log_button" href="../u_cabinet">Кабинет</a>

@@ -9,8 +9,6 @@ $user_handler = new typicalUser();
 $chat_class_holder = new chatForUsers();
 $mes_query = $chat_class_holder->showMessages();
 $message_ar = $mes_query;
-
-var_dump($user_handler->is_guest());
 ?>
 <!-- вывод -->
 <div class="comment_block_container">
@@ -29,7 +27,7 @@ var_dump($user_handler->is_guest());
 		<hr>
 	<?php }?>
 </div>
-<?php if ($user_handler->is_guest()):?>
+<?php if ($user_handler->is_guest()==FALSE):?>
 <br>
 <div class="alert alert-warning" role="alert">
 	<img src="./styles/images/lolpic.png" style="width: 75%; height: 70%;" alt="">
@@ -37,11 +35,8 @@ var_dump($user_handler->is_guest());
 	<p>Чтобы добавлять комментарии - зарегистрируйтесь или войдите в <a href="./login/login.php">Учётную запись</a>.</p>
 </div>
 <?php else:?>
-<form action="./connect/sendMessage.php" method="post" name="form"> <!-- форма написания комментариев -->
-	<p>Автор:
-		<br>
-		<input name="authors_login" type="text" id="authors_login">
-	</p> <!-- TODO имя авторизированного пользователя -->
+<form action="/components/chat_send_mes.php" method="post" name="form"> <!-- форма написания комментариев -->
+	<input name="authors_login" value="<?=$_SESSION['u_login']?>" type="text" id="authors_login" class="hidden"> <!-- TODO имя авторизированного пользователя -->
 	<p>Комментарии:
 		<br>
 		<textarea name="message" rows="9" cols="60" id="message"></textarea>
