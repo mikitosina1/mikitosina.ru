@@ -34,7 +34,7 @@
 							Это вывод функции, прибавления к строке с 10
 							цифровыми значениями, с учётом переполнения.
 						</article>
-						<p>Вывод самой строки: <?php echo $string; ?></p>
+						<p>Вывод самой строки: <?php echo $string = randstr(10); ?></p>
 						<p>Итог сложения: <?php echo thousandplus1(); ?></p>
 					</div>
 					<div class="col-sm post__text">

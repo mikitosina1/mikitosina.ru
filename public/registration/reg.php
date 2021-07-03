@@ -31,39 +31,39 @@ if($user_handler->is_guest() == TRUE){
 				<label class="markplace"><p><b style="color: #880000; font-size: 1.5em;">*</b> - очень важные поля, без которых невозможно зарегистрироваться.</p></label>
 				<div class="formpart">
 					<label for="u_email">Введите Вашу электронную почту</label>
-					<input type="email" name="u_email" id="u_email" class="form-control">
+					<input type="email" name="u_email" id="u_email" class="form-control" placeholder="*****@mail.***">
 				</div>
 				<div class="formpart">
 					<label for="u_login">Ваш<strong style="color: #2d6ca2"> Логин </strong><b style="color: #880000; font-size: 1.5em;">*</b>(не менее 3-х символов)</label>
-					<input type="text" name="u_login" id="u_login" class="form-control">
+					<input type="text" name="u_login" id="u_login" class="form-control" placeholder="Your Login">
 				</div>
 				<div class="formpart">
 					<label for="u_password" class="passLabel">
 						Придумайте<strong style="color: #3e8f3e"> Пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b>
 						<br><p style="font-size: 0.75em;">Не менее 8 символов, заглавные и строчные буквы, цифры (обязательное условие)</p>
 					</label>
-					<input type="password" name="u_password" id="u_password" class="form-control">
+					<input type="password" name="u_password" id="u_password" class="form-control" placeholder="*******">
 				</div>
 
 				<div class="formpart">
 					<label for="u_password2">Повторите <strong style="color: #3e8f3e">пароль</strong><b style="color: #880000; font-size: 1.5em;">*</b></label>
-					<input type="password" name="u_password2" id="u_password2" class="form-control">
+					<input type="password" name="u_password2" id="u_password2" class="form-control" placeholder="*******">
 				</div>
 				<div class="formpart">
 					<label for="Fname">Имя</label>
-					<input type="text" name="Fname" id="Fname" class="form-control">
+					<input type="text" name="Fname" id="Fname" class="form-control" placeholder="Имячко">
 				</div>
 				<div class="formpart">
 					<label for="Lname">Фамилия</label>
-					<input type="text" name="Lname" id="Lname" class="form-control">
+					<input type="text" name="Lname" id="Lname" class="form-control" placeholder="Фамиличка">
 				</div>
 				<div class="formpart">
 					<label for="u_age">Возраст</label>
-					<input type="text" name="u_age" id="u_age" class="form-control">
+					<input type="text" name="u_age" id="u_age" class="form-control" placeholder="от 9 - до 99">
 				</div>
 				<div class="formpart">
 					<label for="u_info">Немного автобиографии</label>
-					<input type="text" name="u_info" id="u_info" class="form-control">
+					<input type="text" name="u_info" id="u_info" class="form-control" placeholder="Если вам есть, что рассказать :)">
 				</div>
 
 				<button type="submit" class="btn btn_reg_regaction btn-success mt-4">Зарегистрироваться</button>

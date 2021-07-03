@@ -20,6 +20,7 @@ class typicalUser{
 		$query = "INSERT INTO start_users (`".$into[0]."`,`".$into[1]."`,`".$into[2]."`,`".$into[3]."`,`".$into[4]."`,`".$into[5]."`,`".$into[6]."`,`".$into[7]."`,`".$into[8]."`) VALUES ('".$value[0]."','".$value[1]."','".$value[2]."','".$value[3]."','".$value[4]."','".$value[5]."','".$value[6]."','".$value[7]."','".$value[8]."')";
 		$db_class_handler = new dataBasetypical();
 		$db_class_handler -> query($query);
+		return $_SESSION["success_reg"] = 1;
 	}
 	
 	public function loginUser($u_login, $u_password) {
@@ -38,6 +39,7 @@ class typicalUser{
 					$_SESSION['u_lastname'] = $user['u_lastname'];
 					$_SESSION['u_age'] = $user['u_age'];
 					$_SESSION['role'] = $user['role'];
+					$_SESSION["success_log"] = 1;
 					setcookie('u_login', $user['u_login'], time()+3600*24*2, "/");
 					return $_SESSION;
 				}else{

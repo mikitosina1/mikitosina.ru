@@ -49,16 +49,13 @@ $params =[
 	'u_password' => $u_password,
 	'u_name' => $username,
 	'u_lastname' => $userlastname,
-	'u_age' => $u_age,
+	'u_age' => int($u_age),
 	'u_info' => $u_info,
 	'role' => $user_role,
 	'user_ip' => $u_ip,
 ];
 if ($is_isset_user == false){
 	$user_handler->regUser($params);
-	echo "<script>alert( 'Регистрация прошла успешно! </br> Через секунду перенесу на Главную.');</script>";
-	sleep(5);
 }
 header("Location: https://mikitosina.ru");
-echo "<script>alert( 'Регистрация прошла успешно!');</script>";
 exit();

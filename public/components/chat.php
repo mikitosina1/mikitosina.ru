@@ -27,6 +27,7 @@ $message_ar = $mes_query;
 		<hr>
 	<?php }?>
 </div>
+<div class="alert alert-danger mt-2" id="errorBlock"></div>
 <?php if ($user_handler->is_guest()==FALSE):?>
 <br>
 <div class="alert alert-warning" role="alert">
@@ -47,4 +48,5 @@ $message_ar = $mes_query;
 		<span id="resp"></span>
 	</p>
 </form>
+<!-- <script src="ajax/chat_class.js" defer></script> -->
 <?php endif;?>

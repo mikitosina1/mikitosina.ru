@@ -21,15 +21,15 @@ if(!empty($_POST['go_message'])){
 		$send_message = $chat_handler->sendMessages($authors_login, $message, $date);
 		
 		if($send_message){
+			echo "<script defer><alert>Cообшение отправлено.</alert></script>";
 			header("Location: https://mikitosina.ru");
-			echo 0; //Ваше сообшение успешно отправлено
 		}else{
+			echo "<script defer><alert>Сообщение не отправлено.</alert></script>";
 			header("Location: https://mikitosina.ru");
-			echo 1; //Сообщение не отправлено. Ошибка базы данных
 		}
 	}else{
+		echo "<script defer><alert>Нельзя отправлять пустые сообщения.</alert></script>";
 		header("Location: https://mikitosina.ru");
-		echo 2; //Нельзя отправлять пустые сообщения
 	}
 }
 ?>

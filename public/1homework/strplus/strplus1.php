@@ -10,7 +10,6 @@ function randstr($lenght = 100){
 	return $randstring;
 
 }
-$string = randstr(10);
 
 function thousandplus1(){
 
