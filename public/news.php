@@ -57,14 +57,14 @@ include_once("./connect/connect.php");
 			data: {'title' : title, 'intro' : intro, 'text' : text},
 			dataType: 'html',
 			success: function(data) {
-			  if(data === 'Готово') {
-				$('#article_send').text('Все готово');
-				$('#errorBlock').hide();
-				}	else {
-						$('#errorBlock').show();
-						$('#errorBlock').text(data);
-					}
+				if(data === 'Готово') {
+					$('#article_send').text('Все готово');
+					$('#errorBlock').hide();
+				}else{
+					$('#errorBlock').show();
+					$('#errorBlock').text(data);
 				}
+			}
 		});
 	});
 </script>

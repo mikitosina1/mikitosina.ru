@@ -1,12 +1,12 @@
 <?php
-require_once (realpath(dirname(__FILE__) . '/../components/main_func.php'));
+require_once (realpath(dirname(__FILE__).'/../components/main_func.php'));
 $user_handler = new typicalUser();
 ?>
 
-<nav class="navbar navbar-expand-lg flex-column flex-md-row" role="navigation">
+<nav class="navbar navbar-expand-lg flex-column flex-md-row justify-content-center" role="navigation">
 	<div class="logo__part">
 		<a class="navbar-brand" href="/">
-<!--			<img src="../styles/images/blog.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">-->
+			<img src="../styles/images/blog.svg" alt="Логотип сайта" title="Логотип сайта" class="logo_header">
 			<div class="title__blog">Mikitosina's Blog :D</div>
 		</a>
 	</div>
@@ -18,8 +18,7 @@ $user_handler = new typicalUser();
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="/">Home
-				<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/">Home</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="../news.php">News</a>
@@ -27,15 +26,12 @@ $user_handler = new typicalUser();
 			<li class="nav-item">
 				<a class="nav-link" href="../contacts.php">Contacts</a>
 			</li>
-			<li class="nav-item dropdown drop_btn">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Hometask
-				</a>
-				<div class="dropdown-menu drop_block" aria-labelledby="navbarDropdown">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdownHT" data-bs-toggle="dropdown" aria-expanded="true">Hometask</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownHT">
 					<a class="dropdown-item" href="../1homework/twitter/index.html">Twitter</a>
 					<a class="dropdown-item" href="../1homework/2hw/index.php">parser</a>
 					<a class="dropdown-item" href="../1homework/3hw/index.php">3hw</a>
-<!--					<a class="dropdown-item" href="../work_project/index.html">Тиснение</a>-->
 					<a class="dropdown-item" href="../1homework/Laravel-homework/laravel_app/public/index.php">Laravel-test_app</a>
 				</div>
 			</li>
@@ -58,9 +54,5 @@ $user_handler = new typicalUser();
 				</li>
 			<?php endif;?>
 		</ul>
-<!-- 		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="в разработке :)" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form> -->
 	</div>
 </nav>

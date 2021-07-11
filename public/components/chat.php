@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="../styles/chat_style.css" media="all">
+<!-- <script src="ajax/chat_class.js" type="text/javascript"></script> -->
 
 <?php
-require_once (realpath(dirname(__FILE__) . '/main_func.php'));
-require_once (realpath(dirname(__FILE__) . '/chat_class.php'));
-require_once (realpath(dirname(__FILE__) . '/../connect/connect.php'));
+require_once (realpath(dirname(__FILE__).'/main_func.php'));
+require_once (realpath(dirname(__FILE__).'/chat_class.php'));
+require_once (realpath(dirname(__FILE__).'/../connect/connect.php'));
 $message_ar = array();
 $user_handler = new typicalUser();
 $chat_class_holder = new chatForUsers();
@@ -36,8 +37,8 @@ $message_ar = $mes_query;
 	<p>Чтобы добавлять комментарии - зарегистрируйтесь или войдите в <a href="./login/login.php">Учётную запись</a>.</p>
 </div>
 <?php else:?>
-<form action="/components/chat_send_mes.php" method="post" name="form"> <!-- форма написания комментариев -->
-	<input name="authors_login" value="<?=$_SESSION['u_login']?>" type="text" id="authors_login" class="hidden"> <!-- TODO имя авторизированного пользователя -->
+<form method="post" name="form" id="chForm"> <!-- форма написания комментариев -->
+	<input name="authors_login" value="<?=$_SESSION['u_login']?>" type="text" id="authors_login" class="hidden">
 	<p>Комментарии:
 		<br>
 		<textarea name="message" rows="9" cols="60" id="message"></textarea>
@@ -48,5 +49,4 @@ $message_ar = $mes_query;
 		<span id="resp"></span>
 	</p>
 </form>
-<!-- <script src="ajax/chat_class.js" defer></script> -->
 <?php endif;?>

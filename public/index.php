@@ -7,8 +7,8 @@
 	<head>
 		<?php
 			require_once "./components/head.php";
-			require_once (realpath(dirname(__FILE__) . '/components/main_func.php'));
-			require_once (realpath(dirname(__FILE__) . '/connect/connect.php'));
+			require_once (realpath(dirname(__FILE__).'/components/main_func.php'));
+			require_once (realpath(dirname(__FILE__).'/connect/connect.php'));
 			require_once ('./1homework/strplus/strplus1.php');
 			require_once ('./learn.php');
 		?>
@@ -47,16 +47,16 @@
 				</div>
 				<div class="col-sm-3 mt-4 d-flex align-items-end flex-column r_side_content login_n_chat">
 					<div class="col">
-							<?php require_once "./components/userpanel.php";?>
+							<?php require_once (realpath(dirname(__FILE__).'/components/userpanel.php'));?>
 					</div>
 					<div class="col mt-3 chat__inner">
-						<?php require "./components/chat.php";?>
+						<?php require (realpath(dirname(__FILE__).'/components/chat.php'));?>
 					</div>
 				</div>
 			</div>
 		</div>
 		<footer>
-			<?php require_once "./components/footer.php";?>
+			<?php require_once (realpath(dirname(__FILE__).'/components/footer.php'));?>
 		</footer>
 	</body>
 </html>
